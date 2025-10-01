@@ -291,7 +291,7 @@ module.exports = {
             }
 
             //check if otp provided matches stored otp
-            if (users[0].otp !== otp) {
+            if (users[0].otp !== parseInt(otp)) {
                 throw new CustomError(
                     400,
                     "Invalid OTP provided. Please try again"
