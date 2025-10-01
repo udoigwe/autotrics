@@ -36,7 +36,7 @@ const postRoutes = require("./src/routes/post"); */
 const errorHandler = require("./src/middleware/errorHandler");
 
 //importing all view routes
-//const viewRoutes = require("./src/routes/view");
+const viewRoutes = require("./src/routes/view");
 
 // Parse YAML Swagger documentation to JSON
 //const swaggerFile = fs.readFileSync("./src/documentation/swagger.yaml", "utf8");
@@ -49,7 +49,7 @@ app.use(process.env.ROUTE_PREFIX, applicationRoutes);
 app.use(process.env.ROUTE_PREFIX, postRoutes); */
 
 //using imported view routes
-//app.use(viewRoutes);
+app.use(viewRoutes);
 
 // Serve Swagger documentation at /api/docs
 //app.use(process.env.API_DOCS_ROUTE_PREFIX, swaggerUi.serve);
