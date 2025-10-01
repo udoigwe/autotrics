@@ -72,7 +72,7 @@ module.exports = {
                 <table style="width: 500px; margin-left: auto; margin-right: auto;">
                     <tr>
                         <td colspan="3" style="text-align: center; padding-top: 100px;">
-                            <span style="font-size: 22px; display: inline-block; font-weight: 900; border: 1px solid grey; padding: 2px; border-radius:5px; width: 70px; margin-top: 10px;">
+                            <span style="font-size: 22px; display: inline-block; font-weight: 900; border: 1px solid grey; padding: 2px; border-radius:5px; width: 150px; margin-top: 10px;">
                                 AUTOTRICS
                             </span>
                         </td>
@@ -184,7 +184,7 @@ module.exports = {
                 <table style="width: 500px; margin-left: auto; margin-right: auto;">
                     <tr>
                         <td colspan="3" style="text-align: center; padding-top: 100px;">
-                            <span style="font-size: 22px; display: inline-block; font-weight: 900; border: 1px solid grey; padding: 2px; border-radius:5px; width: 70px; margin-top: 10px;">
+                            <span style="font-size: 22px; display: inline-block; font-weight: 900; border: 1px solid grey; padding: 2px; border-radius:5px; width: 150px; margin-top: 10px;">
                                 AUTOTRICS
                             </span>
                         </td>
