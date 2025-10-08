@@ -155,37 +155,6 @@ $(function () {
         });
     }
 
-    function loadCountries() {
-        blockUI();
-
-        $.ajax({
-            type: "GET",
-            url: `${API_URL_ROOT}/countries?status=Active`,
-            dataType: "json",
-            contentType: "application/json",
-            success: function (response) {
-                const countries = response.data;
-                let html = '<option value="">Please select</option>';
-
-                for (let i = 0; i < countries.length; i++) {
-                    const country = countries[i];
-
-                    html += `
-                        <option value="${country.country_id}">${country.country_name}</option>
-                    `;
-                }
-
-                $("#country_id").html(html);
-
-                unblockUI();
-            },
-            error: function (req, status, err) {
-                alert(req.responseJSON.message);
-                unblockUI();
-            },
-        });
-    }
-
     function recoverPassword() {
         $("#recovery-form").on("submit", function (e) {
             e.preventDefault();
