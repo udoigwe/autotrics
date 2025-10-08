@@ -141,10 +141,12 @@ function displayProfile() {
     if (token !== null && token !== "") {
         var firstname = payloadClaim(token, "first_name");
         var lastname = payloadClaim(token, "last_name");
+        var userRole = payloadClaim(token, "role");
         var fullname = `${firstname} ${lastname}`;
 
         $(".user-first-name").text(firstname);
         $(".user-name").text(fullname);
+        $(".user-role").text(userRole);
     }
 }
 
