@@ -33,4 +33,14 @@ module.exports = {
             title: "Under Construction | Autotrics",
         });
     },
+    myCars: async (req, res) => {
+        res.render("myCars", {
+            title: "My Cars | Autotrics",
+        });
+    },
+    profile: async (req, res) => {
+        res.render("profile", {
+            title: "My Profile | Autotrics",
+        });
+    },
 };

@@ -72,27 +72,24 @@ module.exports = {
             .withMessage("Password is required"),
     ],
     profileUpdate: [
+        body("first_name")
+            .exists({ checkFalsy: true })
+            .withMessage("First Name is required"),
+        body("last_name")
+            .exists({ checkFalsy: true })
+            .withMessage("Last name is required"),
         body("gender")
             .exists({ checkFalsy: true })
             .withMessage("Gender is required"),
-        body("date_of_birth")
+        body("phone")
             .exists({ checkFalsy: true })
-            .withMessage("Date of birth is required"),
-        body("nationality")
+            .withMessage("Phone is required"),
+        body("address")
             .exists({ checkFalsy: true })
-            .withMessage("Nationality is required"),
-        body("marital_status")
+            .withMessage("Address is required"),
+        body("email")
             .exists({ checkFalsy: true })
-            .withMessage("Marital Status is required"),
-        body("education_level")
-            .exists({ checkFalsy: true })
-            .withMessage("Education Level is required"),
-        body("years_of_experience")
-            .exists({ checkFalsy: true })
-            .withMessage("Years Of Experience is required"),
-        body("language_proficiency")
-            .exists({ checkFalsy: true })
-            .withMessage("Language Proficiency is required"),
+            .withMessage("Email is required"),
     ],
     resetPassword: [
         body("current_password")

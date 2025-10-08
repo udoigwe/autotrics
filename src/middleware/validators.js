@@ -1,5 +1,6 @@
 const { validate } = require("../utils/functions");
 const authValidations = require("../validations/auth.validation");
+const carValidations = require("../validations/car.validation");
 
 module.exports = {
     /* Auth route validators */
@@ -12,4 +13,8 @@ module.exports = {
     ),
     changePassword: validate(authValidations.changePassword),
     resetPassword: validate(authValidations.resetPassword),
+    profileUpdate: validate(authValidations.profileUpdate),
+
+    /* Car route validators */
+    createCar: validate(carValidations.createCar),
 };

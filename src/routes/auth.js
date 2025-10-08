@@ -28,5 +28,11 @@ router.post(
     validators.resetPassword,
     authController.resetPassword
 );
+router.post(
+    "/profile-update",
+    checkAuth.verifyToken,
+    validators.profileUpdate,
+    authController.profileUpdate
+);
 
 module.exports = router;
