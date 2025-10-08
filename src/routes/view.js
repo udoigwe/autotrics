@@ -10,9 +10,9 @@ router.get("/forgot-password", viewsController.forgotPassword);
 router.get("/password-recovery", viewsController.passwordRecovery);
 
 /* Protected pages */
-/* router.get("/dashboard", viewsController.dashboard);
-router.get("/applications", viewsController.applications);
-router.get("/suitable-countries", viewsController.findSuitableCountries);
+router.get("/dashboard", viewsController.dashboard);
+router.get("/coming-soon", viewsController.comingSoon);
+/*router.get("/suitable-countries", viewsController.findSuitableCountries);
 router.get("/account", viewsController.account);
 router.get("/eligibility-check", viewsController.eligibilityCheck);
 router.get("/community", viewsController.community);
