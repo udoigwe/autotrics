@@ -23,4 +23,14 @@ module.exports = {
     },
 
     /* Protected pages */
+    dashboard: async (req, res) => {
+        res.render("dashboard", {
+            title: "Dashboard | Autotrics",
+        });
+    },
+    comingSoon: async (req, res) => {
+        res.render("comingSoon", {
+            title: "Under Construction | Autotrics",
+        });
+    },
 };
