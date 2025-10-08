@@ -369,17 +369,9 @@ module.exports = {
         }
     },
     profileUpdate: async (req, res, next) => {
-        const userID = req.userDecodedData.userID;
-
-        const {
-            gender,
-            date_of_birth,
-            nationality,
-            marital_status,
-            education_level,
-            years_of_experience,
-            language_proficiency,
-        } = req.body;
+        const userID = req.userDecodedData.user_id;
+        const { first_name, last_name, gender, phone, address, email } =
+            req.body;
 
         let connection;
 
@@ -393,86 +385,76 @@ module.exports = {
             //check if user profile exists
             const [profiles] = await connection.execute(
                 `
-                SELECT * FROM personalinformation
+                SELECT * FROM users
                 WHERE user_id = ? 
                 LIMIT 1`,
                 [userID]
             );
 
+            //check if inputed email address exists
+            const [emails] = await connection.execute(
+                `
+                    SELECT * FROM users
+                    WHERE email = ?
+                    AND user_id != ?
+                    LIMIT 1
+                `,
+                [email, userID]
+            );
+
+            //check if inputed phone number exists
+            const [phones] = await connection.execute(
+                `
+                    SELECT * FROM users
+                    WHERE phone = ?
+                    AND user_id != ?
+                    LIMIT 1
+                `,
+                [phone, userID]
+            );
+
             if (profiles.length === 0) {
-                //user profile information does not exist. Create a new one
-                await connection.execute(
-                    `
-                    INSERT INTO personalinformation
-                    (
-                        user_id,
-                        gender,
-                        date_of_birth,
-                        nationality,
-                        marital_status,
-                        education_level,
-                        years_of_experience,
-                        language_proficiency
-                    )
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-                    [
-                        userID,
-                        gender,
-                        date_of_birth,
-                        nationality,
-                        marital_status,
-                        education_level,
-                        years_of_experience,
-                        language_proficiency,
-                    ]
+                //user does not exist
+                throw new CustomError(404, "Sorry!!! User does not exist");
+            }
+
+            if (emails.length > 0) {
+                //provided email address is taken by another
+                throw new CustomError(
+                    404,
+                    "Sorry!!! The preferred email address is already taken"
                 );
             }
 
-            if (profiles.length > 0) {
-                //user has profile already. Update profile
-                await connection.execute(
-                    `
-                    UPDATE personalinformation
-                    SET 
-                        gender = ?,
-                        date_of_birth = ?,
-                        nationality = ?,
-                        marital_status = ?,
-                        education_level = ?,
-                        years_of_experience = ?,
-                        language_proficiency = ?
-                    WHERE user_id = ?`,
-                    [
-                        gender,
-                        date_of_birth,
-                        nationality,
-                        marital_status,
-                        education_level,
-                        years_of_experience,
-                        language_proficiency,
-                        userID,
-                    ]
+            if (phones.length > 0) {
+                //provided phone number is taken by another
+                throw new CustomError(
+                    404,
+                    "Sorry!!! The preferred phone number is already taken"
                 );
             }
 
-            //update user profile completion status
+            //update user profile
             await connection.execute(
                 `
                 UPDATE users
                 SET 
-                    profile_completion_status = 'Completed'
-                WHERE userID = ?`,
-                [userID]
+                    first_name = ?,
+                    last_name = ?,
+                    gender = ?,
+                    phone = ?,
+                    email = ?,
+                    address = ?
+                WHERE user_id = ?`,
+                [first_name, last_name, gender, phone, email, address, userID]
             );
 
             //get current user details
             const [users] = await connection.execute(
                 `
-                SELECT a.*, b.* 
-                FROM users a
-                LEFT JOIN personalinformation b
-                ON a.userID = b.user_id
-                WHERE a.userID = ?
+                SELECT * 
+                FROM users
+                WHERE user_id = ?
                 LIMIT 1`,
                 [userID]
             );
