@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2025 at 01:31 PM
+-- Generation Time: Oct 08, 2025 at 09:18 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `autotrics`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cars`
+--
+
+CREATE TABLE `cars` (
+  `car_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `car_make` varchar(255) NOT NULL,
+  `car_model` varchar(255) NOT NULL,
+  `car_milage` varchar(255) NOT NULL,
+  `car_year` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cars`
+--
+
+INSERT INTO `cars` (`car_id`, `user_id`, `car_make`, `car_model`, `car_milage`, `car_year`, `created_at`) VALUES
+(1, 2, 'Toyota', 'Camry', '123', '2003', '2025-10-08 19:18:23');
 
 -- --------------------------------------------------------
 
@@ -55,6 +78,13 @@ INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `gender`, `phone`, `e
 --
 
 --
+-- Indexes for table `cars`
+--
+ALTER TABLE `cars`
+  ADD PRIMARY KEY (`car_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -63,6 +93,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `cars`
+--
+ALTER TABLE `cars`
+  MODIFY `car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
