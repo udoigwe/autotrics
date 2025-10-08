@@ -141,12 +141,21 @@ function displayProfile() {
     if (token !== null && token !== "") {
         var firstname = payloadClaim(token, "first_name");
         var lastname = payloadClaim(token, "last_name");
+        var email = payloadClaim(token, "email");
+        var phone = payloadClaim(token, "phone");
+        var gender = payloadClaim(token, "gender");
         var userRole = payloadClaim(token, "role");
+        var userAddress = payloadClaim(token, "address");
         var fullname = `${firstname} ${lastname}`;
 
         $(".user-first-name").text(firstname);
+        $(".user-last-name").text(lastname);
         $(".user-name").text(fullname);
         $(".user-role").text(userRole);
+        $(".user-address").text(userAddress);
+        $(".user-email").text(email);
+        $(".user-phone").text(phone);
+        $(".user-gender").text(gender);
     }
 }
 
