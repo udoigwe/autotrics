@@ -30,6 +30,7 @@ app.set("views", "./src/views");
 
 //importing all required routes
 const authRoutes = require("./src/routes/auth");
+const carRoutes = require("./src/routes/car");
 /* const resoucesRoutes = require("./src/routes/resources");
 const applicationRoutes = require("./src/routes/application");
 const postRoutes = require("./src/routes/post"); */
@@ -44,6 +45,7 @@ const viewRoutes = require("./src/routes/view");
 
 //using imported routes
 app.use(process.env.ROUTE_PREFIX, authRoutes);
+app.use(process.env.ROUTE_PREFIX, carRoutes);
 /* app.use(process.env.ROUTE_PREFIX, resoucesRoutes);
 app.use(process.env.ROUTE_PREFIX, applicationRoutes);
 app.use(process.env.ROUTE_PREFIX, postRoutes); */
