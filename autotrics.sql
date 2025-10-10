@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2025 at 09:18 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Oct 10, 2025 at 04:52 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,7 +42,21 @@ CREATE TABLE `cars` (
 --
 
 INSERT INTO `cars` (`car_id`, `user_id`, `car_make`, `car_model`, `car_milage`, `car_year`, `created_at`) VALUES
-(1, 2, 'Toyota', 'Camry', '123', '2003', '2025-10-08 19:18:23');
+(1, 2, 'Toyota', 'Camry', '123', '2003', '2025-10-08 12:20:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `knowledge_hub_chats`
+--
+
+CREATE TABLE `knowledge_hub_chats` (
+  `message_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `sender_role` enum('user','assistant') NOT NULL DEFAULT 'user',
+  `message` longtext NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -85,6 +99,13 @@ ALTER TABLE `cars`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indexes for table `knowledge_hub_chats`
+--
+ALTER TABLE `knowledge_hub_chats`
+  ADD PRIMARY KEY (`message_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -99,6 +120,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `cars`
   MODIFY `car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `knowledge_hub_chats`
+--
+ALTER TABLE `knowledge_hub_chats`
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
