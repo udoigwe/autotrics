@@ -10,5 +10,6 @@ router.post(
     validators.createChat,
     chatController.createChat
 );
+router.get("/chats", checkAuth.verifyToken, chatController.getChats);
 
 module.exports = router;
