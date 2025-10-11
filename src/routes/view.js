@@ -14,11 +14,6 @@ router.get("/dashboard", viewsController.dashboard);
 router.get("/coming-soon", viewsController.comingSoon);
 router.get("/my-cars", viewsController.myCars);
 router.get("/profile", viewsController.profile);
-/*router.get("/account", viewsController.account);
-router.get("/eligibility-check", viewsController.eligibilityCheck);
-router.get("/community", viewsController.community);
-router.get("/immigration-insights", viewsController.immigrationInsights);
-router.get("/compare-countries", viewsController.compareCountries);
-router.get("/blog-post", viewsController.blogPost); */
+router.get("/knowledge-hub", viewsController.knowledgeHub);
 
 module.exports = router;
