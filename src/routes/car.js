@@ -11,5 +11,17 @@ router.post(
     carController.createCar
 );
 router.get("/cars", checkAuth.verifyToken, carController.getAllCars);
+router.put(
+    "/cars/:car_id",
+    checkAuth.verifyToken,
+    validators.updateCar,
+    carController.updateCar
+);
+router.delete(
+    "/cars/:car_id",
+    checkAuth.verifyToken,
+    validators.deleteCar,
+    carController.deleteCar
+);
 
 module.exports = router;
