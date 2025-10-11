@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/udoigwe/autotrics#readme",
   "dependencies": {
+    "@google/genai": "^1.23.0",
     "cors": "^2.8.5",
     "crypto-js": "^4.2.0",
     "dotenv": "^17.2.3",
@@ -38,7 +39,6 @@
     "mysql2": "^3.15.1",
     "nodemailer": "^7.0.6",
     "nodemon": "^3.1.10",
-    "openai": "^6.3.0",
     "swagger-ui-express": "^5.0.1"
   }
 }
