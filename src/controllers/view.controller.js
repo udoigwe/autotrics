@@ -43,4 +43,9 @@ module.exports = {
             title: "My Profile | Autotrics",
         });
     },
+    knowledgeHub: async (req, res) => {
+        res.render("knowledge-hub", {
+            title: "Knowledge Hub | Autotrics",
+        });
+    },
 };
