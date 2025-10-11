@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <%- include('./partials/head') %>
+    <!-- Include Marked.js (lightweight Markdown parser) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body
+    onload="isAuthenticated(); displayProfile()"
+    x-data="{ page: 'knowledgeHub', 'loaded': true, 'darkMode': false, 'stickyMenu': false, 'sidebarToggle': false, 'scrollTop': false, isMobile: false, isSidebarOpen: false  }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'dark bg-gray-900': darkMode === true}">
+    <%- include('./partials/preloader') %>
+
+    <!-- ===== Page Wrapper Start ===== -->
+    <div class="flex h-screen overflow-hidden">
+        <%- include('./partials/sidebar') %>
+
+        <!-- ===== Content Area Start ===== -->
+        <div class="relative flex flex-1 flex-col overflow-x-hidden">
+            <!-- Small Device Overlay Start -->
+            <div :class="sidebarToggle ? 'block xl:hidden' : 'hidden'"
+                class="fixed z-50 h-screen w-full bg-gray-900/50"></div>
+            <!-- Small Device Overlay End -->
+
+            <%- include('./partials/header') %>
+
+            <!-- ===== Main Content Start ===== -->
+            <main>
+                <!-- Breadcrumb Start -->
+                <div x-data="{ pageName: `Knowledge Hub`}">
+                    <div
+                        class="relative flex w-full flex-wrap items-center justify-between gap-3 border-b border-gray-200 bg-white px-6 py-5 dark:border-gray-800 dark:bg-gray-900">
+                        <h2 class="text-xl font-semibold text-gray-800 dark:text-white/90" x-text="pageName">
+                            Text Generator
+                        </h2>
+                        <nav>
+                            <ol class="flex items-center gap-1.5">
+                                <li>
+                                    <a class="inline-flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400"
+                                        href="/dashboard">
+                                        Home
+                                        <svg class="stroke-current" width="17" height="16" viewBox="0 0 17 16"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.0765 12.667L10.2432 8.50033L6.0765 4.33366" stroke=""
+                                                stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="text-sm text-gray-800 dark:text-white/90" x-text="pageName"></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Breadcrumb End -->
+
+                <!-- Content Start -->
+                <div class="relative h-[calc(100vh-146px)] px-4 xl:flex xl:px-0">
+                    <!-- Mobile Chat Header  -->
+                    <div
+                        class="my-6 flex items-center justify-between rounded-2xl border border-gray-200 bg-white p-3 xl:hidden dark:border-gray-800 dark:bg-gray-900">
+                        <h4 class="pl-2 text-lg font-medium text-gray-800 dark:text-white/90">
+                            Chats History
+                        </h4>
+                        <button @click="isSidebarOpen = true"
+                            class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-gray-300 text-gray-700 dark:border-gray-700 dark:text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M4 6L20 6M4 18L20 18M4 12L20 12" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex-1 xl:py-10">
+                        <div class="relative mx-auto flex max-w-[720px] flex-col">
+                            <div class="custom-scrollbar relative z-20 max-h-[50vh] flex-1 space-y-7 overflow-y-auto pb-10 lg:pb-7 chats"></div>
+                            <!-- Fixed Input Wrapper -->
+                            <div
+                                class="fixed bottom-5 left-1/2 z-20 w-full -translate-x-1/2 transform px-4 sm:px-6 lg:bottom-10 lg:px-8">
+                                <!-- Container with max width -->
+                                <div
+                                    class="mx-auto w-full max-w-[720px] rounded-2xl border border-gray-200 bg-white p-5 shadow-xs dark:border-gray-800 dark:bg-gray-800">
+                                    <form id="new-chat-message">
+                                        <!-- Textarea -->
+                                        <textarea
+                                            id="message"
+                                            name="message"
+                                            placeholder="Type your prompt here..."
+                                            class="h-20 w-full resize-none border-none bg-transparent p-0 font-normal text-gray-800 outline-none placeholder:text-gray-400 focus:ring-0 dark:text-white"></textarea>
+
+                                        <!-- Bottom Section -->
+                                        <div class="flex items-center justify-between pt-2">
+                                            <button
+                                                class="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
+                                                
+                                            </button>
+
+                                            <!-- Send Button -->
+                                            <button
+                                                class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gray-900 text-white transition hover:bg-gray-800 dark:bg-white/90 dark:text-gray-800 dark:hover:bg-gray-900 dark:hover:text-white/90">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                    <path
+                                                        d="M9.99674 3.33252L9.99675 16.667M5 8.32918L9.99984 3.33252L15 8.32918"
+                                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backdrop -->
+                    <div x-show="isSidebarOpen" @click="isSidebarOpen = false" x-transition.opacity
+                        class="fixed inset-0 z-[99999] bg-black/50 xl:hidden dark:bg-black/80">
+                        <div class="absolute top-4 right-[300px]">
+                            <button
+                                class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-800 transition hover:bg-gray-100 dark:bg-gray-800 dark:text-white/90 dark:hover:bg-white/3 hover:dark:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M6.75104 17.249L17.249 6.75111M6.75104 6.75098L17.249 17.2489"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <aside
+                        :class="isSidebarOpen ? 'flex fixed xl:static top-0 right-0 z-999999 h-screen bg-white dark:bg-gray-900' : 'hidden xl:flex'"
+                        class="z-50 w-[280px] flex-col border-l border-gray-200 bg-white p-6 ease-in-out dark:border-gray-800 dark:bg-gray-900">
+                    </aside>
+                </div>
+                <!-- Content Area End -->
+            </main>
+            <!-- ===== Main Content End ===== -->
+        </div>
+        <!-- ===== Content Area End ===== -->
+    </div>
+    <%- include('./partials/scripts') %>
+    <script src="/assets/js/modules/knowledge-hub.js"></script>
+</body>
+</html>
