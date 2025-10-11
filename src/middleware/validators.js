@@ -18,6 +18,8 @@ module.exports = {
 
     /* Car route validators */
     createCar: validate(carValidations.createCar),
+    updateCar: validate(carValidations.updateCar),
+    deleteCar: validate(carValidations.deleteCar),
 
     /* Chat route validators */
     createChat: validate(chatValidations.createChat),
