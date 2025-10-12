@@ -15,5 +15,6 @@ router.get("/coming-soon", viewsController.comingSoon);
 router.get("/my-cars", viewsController.myCars);
 router.get("/profile", viewsController.profile);
 router.get("/knowledge-hub", viewsController.knowledgeHub);
+router.get("/mechanic-finder", viewsController.mechanicFinder);
 
 module.exports = router;

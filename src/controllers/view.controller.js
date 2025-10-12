@@ -48,4 +48,9 @@ module.exports = {
             title: "Knowledge Hub | Autotrics",
         });
     },
+    mechanicFinder: async (req, res) => {
+        res.render("mechanic-finder", {
+            title: "Mechanic Finder | Autotrics",
+        });
+    },
 };
