@@ -1,0 +1,952 @@
+[
+  {
+	"car_make": "Toyota",
+	"question": "How often should I service my Toyota?",
+	"answer": "Toyota recommends servicing every 5,000 to 10,000 kilometers or every six months, whichever comes first."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What type of oil should I use in my Toyota engine?",
+	"answer": "Most Toyota engines perform best with SAE 0W-20 full synthetic oil, but always check your owner's manual for your specific model."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How long does a Toyota engine typically last?",
+	"answer": "With proper maintenance, Toyota engines can last over 300,000 kilometers or more without major issues."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota offer hybrid vehicles?",
+	"answer": "Yes, Toyota is a pioneer in hybrid technology, offering models like the Prius, Camry Hybrid, RAV4 Hybrid, and Corolla Hybrid."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is ToyotaCare?",
+	"answer": "ToyotaCare is a no-cost maintenance plan that covers factory-recommended service for two years or 25,000 miles, plus 24-hour roadside assistance."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How reliable are Toyota vehicles?",
+	"answer": "Toyota vehicles are known worldwide for their reliability and low maintenance costs, consistently ranking high in dependability studies."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Where is Toyota headquartered?",
+	"answer": "Toyota Motor Corporation is headquartered in Toyota City, Aichi Prefecture, Japan."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota make electric vehicles?",
+	"answer": "Toyota currently offers hybrid and plug-in hybrid models and is expanding into full electric vehicles like the Toyota bZ4X."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is the most popular Toyota model?",
+	"answer": "The Toyota Corolla is the world's best-selling car, known for its reliability, fuel efficiency, and affordability."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyota cars expensive to maintain?",
+	"answer": "No, Toyota vehicles are among the most affordable to maintain due to their durable engineering and wide availability of spare parts."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What does the Toyota logo mean?",
+	"answer": "The three overlapping ovals in the Toyota logo represent the unification of the hearts of Toyota customers and the company."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How can I check my Toyota’s service history?",
+	"answer": "You can access your vehicle’s service history through the Toyota Owners portal or by contacting your local dealership."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is Toyota Safety Sense?",
+	"answer": "Toyota Safety Sense is a suite of active safety features like Pre-Collision System, Lane Departure Alert, and Adaptive Cruise Control."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Can I tow with a Toyota RAV4?",
+	"answer": "Yes, the Toyota RAV4 can tow up to 1,500 pounds with the standard engine and up to 3,500 pounds with the Adventure or TRD Off-Road trims."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyota hybrids expensive to repair?",
+	"answer": "No, Toyota hybrid systems are highly reliable, and the batteries are designed to last over 8 years or 160,000 km."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How do I know if my Toyota has a recall?",
+	"answer": "You can check for recalls by entering your Vehicle Identification Number (VIN) on Toyota’s official recall website."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Do Toyota vehicles come with a warranty?",
+	"answer": "Yes, Toyota vehicles typically come with a 3-year/36,000-mile basic warranty and a 5-year/60,000-mile powertrain warranty."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota offer all-wheel drive?",
+	"answer": "Yes, many Toyota models such as the RAV4, Highlander, and Camry offer optional all-wheel drive for better traction."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Can I use regular gasoline in my Toyota?",
+	"answer": "Yes, most Toyota vehicles run efficiently on regular unleaded gasoline, unless otherwise specified in the manual."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyotas good for off-road driving?",
+	"answer": "Yes, models like the Toyota 4Runner, Land Cruiser, and Tacoma are built for off-road durability and performance."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How do I reset the maintenance light on my Toyota?",
+	"answer": "Turn the ignition on, hold the trip reset button, and wait until the maintenance light blinks and turns off."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is the average fuel economy of a Toyota Corolla?",
+	"answer": "The Toyota Corolla averages between 30 to 40 miles per gallon, depending on the engine and driving conditions."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Is Toyota a Japanese company?",
+	"answer": "Yes, Toyota Motor Corporation was founded in Japan in 1937 by Kiichiro Toyoda."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How safe are Toyota cars?",
+	"answer": "Toyota vehicles consistently receive top safety ratings from agencies like the NHTSA and IIHS, thanks to advanced safety features."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Do Toyota vehicles hold their resale value?",
+	"answer": "Yes, Toyota vehicles are among the best in resale value due to their reliability and strong brand reputation."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What financing options does Toyota offer?",
+	"answer": "Toyota Financial Services provides various loan and lease options with flexible terms for both new and certified used vehicles."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyota SUVs fuel-efficient?",
+	"answer": "Yes, Toyota SUVs like the RAV4 Hybrid and Highlander Hybrid offer excellent fuel efficiency without sacrificing performance."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How can I connect my phone to my Toyota?",
+	"answer": "You can connect your smartphone using Bluetooth, Apple CarPlay, or Android Auto depending on your vehicle model and year."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Where can I find Toyota parts?",
+	"answer": "Genuine Toyota parts are available at authorized Toyota dealerships or certified parts retailers worldwide."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is the Toyota Prius known for?",
+	"answer": "The Toyota Prius is known for being the world’s first mass-produced hybrid car, offering exceptional fuel economy and reliability."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How often should I service my Toyota?",
+	"answer": "Toyota recommends servicing every 5,000 to 10,000 kilometers or every six months, whichever comes first."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What type of oil should I use in my Toyota engine?",
+	"answer": "Most Toyota engines perform best with SAE 0W-20 full synthetic oil, but always check your owner's manual for your specific model."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How long does a Toyota engine typically last?",
+	"answer": "With proper maintenance, Toyota engines can last over 300,000 kilometers or more without major issues."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota offer hybrid vehicles?",
+	"answer": "Yes, Toyota is a pioneer in hybrid technology, offering models like the Prius, Camry Hybrid, RAV4 Hybrid, and Corolla Hybrid."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is ToyotaCare?",
+	"answer": "ToyotaCare is a no-cost maintenance plan that covers factory-recommended service for two years or 25,000 miles, plus 24-hour roadside assistance."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How reliable are Toyota vehicles?",
+	"answer": "Toyota vehicles are known worldwide for their reliability and low maintenance costs, consistently ranking high in dependability studies."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Where is Toyota headquartered?",
+	"answer": "Toyota Motor Corporation is headquartered in Toyota City, Aichi Prefecture, Japan."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota make electric vehicles?",
+	"answer": "Toyota currently offers hybrid and plug-in hybrid models and is expanding into full electric vehicles like the Toyota bZ4X."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is the most popular Toyota model?",
+	"answer": "The Toyota Corolla is the world's best-selling car, known for its reliability, fuel efficiency, and affordability."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyota cars expensive to maintain?",
+	"answer": "No, Toyota vehicles are among the most affordable to maintain due to their durable engineering and wide availability of spare parts."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What does the Toyota logo mean?",
+	"answer": "The three overlapping ovals in the Toyota logo represent the unification of the hearts of Toyota customers and the company."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How can I check my Toyota’s service history?",
+	"answer": "You can access your vehicle’s service history through the Toyota Owners portal or by contacting your local dealership."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is Toyota Safety Sense?",
+	"answer": "Toyota Safety Sense is a suite of active safety features like Pre-Collision System, Lane Departure Alert, and Adaptive Cruise Control."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Can I tow with a Toyota RAV4?",
+	"answer": "Yes, the Toyota RAV4 can tow up to 1,500 pounds with the standard engine and up to 3,500 pounds with the Adventure or TRD Off-Road trims."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyota hybrids expensive to repair?",
+	"answer": "No, Toyota hybrid systems are highly reliable, and the batteries are designed to last over 8 years or 160,000 km."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How do I know if my Toyota has a recall?",
+	"answer": "You can check for recalls by entering your Vehicle Identification Number (VIN) on Toyota’s official recall website."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Do Toyota vehicles come with a warranty?",
+	"answer": "Yes, Toyota vehicles typically come with a 3-year/36,000-mile basic warranty and a 5-year/60,000-mile powertrain warranty."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota offer all-wheel drive?",
+	"answer": "Yes, many Toyota models such as the RAV4, Highlander, and Camry offer optional all-wheel drive for better traction."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Can I use regular gasoline in my Toyota?",
+	"answer": "Yes, most Toyota vehicles run efficiently on regular unleaded gasoline, unless otherwise specified in the manual."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyotas good for off-road driving?",
+	"answer": "Yes, models like the Toyota 4Runner, Land Cruiser, and Tacoma are built for off-road durability and performance."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How do I reset the maintenance light on my Toyota?",
+	"answer": "Turn the ignition on, hold the trip reset button, and wait until the maintenance light blinks and turns off."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is the average fuel economy of a Toyota Corolla?",
+	"answer": "The Toyota Corolla averages between 30 to 40 miles per gallon, depending on the engine and driving conditions."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Do Toyota vehicles hold their resale value?",
+	"answer": "Yes, Toyota vehicles are among the best in resale value due to their reliability and strong brand reputation."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyota SUVs fuel-efficient?",
+	"answer": "Yes, Toyota SUVs like the RAV4 Hybrid and Highlander Hybrid offer excellent fuel efficiency without sacrificing performance."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How can I connect my phone to my Toyota?",
+	"answer": "You can connect your smartphone using Bluetooth, Apple CarPlay, or Android Auto depending on your vehicle model and year."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Where can I find Toyota parts?",
+	"answer": "Genuine Toyota parts are available at authorized Toyota dealerships or certified parts retailers worldwide."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is the Toyota Prius known for?",
+	"answer": "The Toyota Prius is known for being the world’s first mass-produced hybrid car, offering exceptional fuel economy and reliability."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Which Toyota is best for families?",
+	"answer": "The Toyota Highlander and Sienna are ideal family vehicles, offering spacious interiors and advanced safety features."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How long do Toyota hybrid batteries last?",
+	"answer": "Toyota hybrid batteries are designed to last at least 8 years or 160,000 km, often much longer with proper care."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota offer certified used cars?",
+	"answer": "Yes, Toyota Certified Used Vehicles undergo a 160-point inspection and come with a warranty and roadside assistance."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is the warranty on a Toyota hybrid battery?",
+	"answer": "Toyota hybrid batteries typically have an 8-year/160,000 km warranty."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Can Toyota vehicles use E10 fuel?",
+	"answer": "Yes, most Toyota vehicles can safely run on E10 fuel containing up to 10% ethanol."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyota cars easy to insure?",
+	"answer": "Yes, Toyotas are generally inexpensive to insure due to their strong safety record and reliability."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Where are Toyota vehicles manufactured?",
+	"answer": "Toyota vehicles are produced in over 30 countries including Japan, the United States, the UK, and Thailand."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is the Toyota Camry known for?",
+	"answer": "The Camry is known for its comfort, reliability, and smooth ride, making it a top choice for midsize sedans."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota make diesel cars?",
+	"answer": "Toyota offers some diesel engines in select global markets, mostly for trucks and SUVs."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Can I upgrade my Toyota’s infotainment system?",
+	"answer": "Yes, Toyota dealers offer software updates or upgrades to support features like Apple CarPlay and Android Auto."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What does 'TRD' stand for in Toyota models?",
+	"answer": "TRD stands for Toyota Racing Development, Toyota’s performance and off-road engineering division."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What should I do if my Toyota’s check engine light comes on?",
+	"answer": "If the check engine light appears, check for obvious issues like a loose gas cap, and schedule service if it persists."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota make trucks?",
+	"answer": "Yes, Toyota manufactures durable trucks such as the Tacoma and Tundra."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Which Toyota is best for off-roading?",
+	"answer": "The Toyota 4Runner TRD Pro and Land Cruiser are top choices for serious off-road adventures."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Is Toyota connected to Lexus?",
+	"answer": "Yes, Lexus is Toyota’s luxury vehicle division, sharing engineering excellence and technology."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How can I extend the life of my Toyota?",
+	"answer": "Regular oil changes, timely maintenance, and using genuine parts help extend your Toyota’s lifespan."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota have sports cars?",
+	"answer": "Yes, Toyota offers performance models like the GR Supra and GR86 developed by Gazoo Racing."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What does the 'GR' in Toyota GR stand for?",
+	"answer": "GR stands for Gazoo Racing, Toyota’s global motorsport and performance brand."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyota cars environmentally friendly?",
+	"answer": "Yes, Toyota is a leader in hybrid and efficient engines that reduce emissions and fuel use."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota offer roadside assistance?",
+	"answer": "Yes, ToyotaCare provides 24-hour roadside assistance for two years from purchase."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What should I check before a long trip in my Toyota?",
+	"answer": "Inspect tires, fluids, lights, and brakes, and ensure your maintenance is up to date before traveling."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Can Toyota vehicles use synthetic oil?",
+	"answer": "Yes, Toyota engines perform very well with synthetic oils that improve protection and longevity."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyota cars suitable for new drivers?",
+	"answer": "Yes, Toyota cars are safe, easy to drive, and affordable to maintain—ideal for beginners."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What makes Toyota engines reliable?",
+	"answer": "Toyota’s precision engineering, quality materials, and rigorous testing ensure long-term engine durability."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "How long can a Toyota hybrid last?",
+	"answer": "Many Toyota hybrids last well beyond 300,000 km with routine maintenance."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Can I remote start my Toyota?",
+	"answer": "Yes, many Toyota models support remote start through the Toyota app or key fob."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota have a mobile app?",
+	"answer": "Yes, the Toyota app lets you manage your vehicle’s status, maintenance, and remote features."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Are Toyota interiors durable?",
+	"answer": "Yes, Toyota uses high-quality materials designed to withstand years of use and exposure."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "What is the top luxury Toyota model?",
+	"answer": "The Toyota Crown and Avalon are Toyota’s premium sedan offerings."
+  },
+  {
+	"car_make": "Toyota",
+	"question": "Does Toyota participate in motorsports?",
+	"answer": "Yes, Toyota competes in NASCAR, WRC, and endurance racing through Gazoo Racing."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "How often should I service my Mercedes-Benz?",
+	"answer": "Mercedes-Benz vehicles typically require service every 10,000 miles or once a year, following the Flexible Service System (ASSYST)."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes-Benz Service A?",
+	"answer": "Service A includes an oil change, fluid level checks, tire inspection, and general maintenance, usually performed at 10,000 miles or 1 year."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes-Benz Service B?",
+	"answer": "Service B includes everything in Service A plus cabin filter replacement and additional inspections, typically every 20,000 miles or 2 years."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Is Mercedes-Benz expensive to maintain?",
+	"answer": "Mercedes maintenance costs are higher than average due to premium parts and advanced technology, but regular service helps prevent costly repairs."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Where is Mercedes-Benz headquartered?",
+	"answer": "Mercedes-Benz is headquartered in Stuttgart, Germany."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What does the Mercedes-Benz logo mean?",
+	"answer": "The three-pointed star represents Mercedes’ dominance on land, sea, and air."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Who owns Mercedes-Benz?",
+	"answer": "Mercedes-Benz is owned by Mercedes-Benz Group AG, formerly known as Daimler AG."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is the difference between AMG and regular Mercedes models?",
+	"answer": "AMG models are high-performance versions of Mercedes cars, offering enhanced power, handling, and design features."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes 4MATIC?",
+	"answer": "4MATIC is Mercedes-Benz’s all-wheel-drive system that improves traction and handling on various terrains."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz offer electric vehicles?",
+	"answer": "Yes, Mercedes offers electric models under the EQ lineup, such as the EQS, EQE, and EQA."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What does 'EQ' stand for in Mercedes models?",
+	"answer": "EQ stands for 'Electric Intelligence,' representing Mercedes-Benz’s electric and hybrid vehicle range."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What warranty does Mercedes-Benz offer?",
+	"answer": "Mercedes vehicles come with a 4-year or 50,000-mile new vehicle limited warranty."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "How reliable are Mercedes-Benz cars?",
+	"answer": "Mercedes vehicles are known for performance and innovation, though reliability can vary depending on model and maintenance."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes-Benz PRESAFE?",
+	"answer": "PRESAFE is a safety system that prepares the vehicle and passengers for an imminent collision by tightening seatbelts and closing windows."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is MBUX?",
+	"answer": "MBUX (Mercedes-Benz User Experience) is the brand’s advanced infotainment system featuring voice control, navigation, and AI personalization."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "How can I connect my phone to my Mercedes?",
+	"answer": "You can connect your phone via Bluetooth, Apple CarPlay, or Android Auto using the MBUX system."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Are Mercedes-Benz cars safe?",
+	"answer": "Yes, Mercedes-Benz consistently earns top safety ratings and includes advanced safety features like Active Brake Assist and Lane Keeping Assist."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes-Benz’s best-selling model?",
+	"answer": "The Mercedes-Benz C-Class has long been one of the brand’s most popular and best-selling models."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz have SUVs?",
+	"answer": "Yes, Mercedes offers a range of SUVs including the GLA, GLB, GLC, GLE, and GLS."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is the AMG line?",
+	"answer": "The AMG Line includes sportier styling, performance tuning, and upgraded interior finishes inspired by AMG models."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "How long can a Mercedes-Benz last?",
+	"answer": "With proper maintenance, many Mercedes vehicles last well beyond 300,000 kilometers."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is the Mercedes-Benz S-Class known for?",
+	"answer": "The S-Class is Mercedes’ flagship luxury sedan, known for innovation, comfort, and advanced technology."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes offer diesel engines?",
+	"answer": "Yes, Mercedes-Benz offers diesel engines in select global markets, particularly in Europe."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is the Mercedes-Benz G-Class?",
+	"answer": "The G-Class, also known as the G-Wagon, is a luxury off-road SUV known for its rugged design and performance."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes-Benz’s sportiest car?",
+	"answer": "The Mercedes-AMG GT and AMG SL are among the brand’s top-performing sports cars."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Are Mercedes vehicles good for long drives?",
+	"answer": "Yes, Mercedes-Benz vehicles offer exceptional comfort and stability, making them excellent for long-distance driving."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Can I lease a Mercedes-Benz?",
+	"answer": "Yes, Mercedes-Benz Financial Services offers various leasing and financing options."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What does ‘BlueTEC’ mean?",
+	"answer": "BlueTEC refers to Mercedes-Benz’s clean diesel technology that reduces emissions."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Is Mercedes-Benz a German brand?",
+	"answer": "Yes, Mercedes-Benz is a German luxury automaker founded in 1926."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Who founded Mercedes-Benz?",
+	"answer": "Mercedes-Benz was founded by Karl Benz and Gottlieb Daimler, pioneers of the automobile industry."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes-Benz DISTRONIC?",
+	"answer": "DISTRONIC is an adaptive cruise control system that automatically adjusts speed to maintain a safe following distance."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Can I buy a certified pre-owned Mercedes?",
+	"answer": "Yes, Mercedes Certified Pre-Owned vehicles come with a 1-year unlimited-mile warranty and a thorough inspection."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What does ‘Maybach’ mean in Mercedes models?",
+	"answer": "Maybach is Mercedes-Benz’s ultra-luxury division, offering enhanced comfort and exclusive craftsmanship."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Are Mercedes vehicles all automatic?",
+	"answer": "Most Mercedes vehicles feature automatic transmissions, though some AMG models offer manual or paddle-shift options."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz offer hybrid cars?",
+	"answer": "Yes, Mercedes offers plug-in hybrids like the C300e, E300e, and GLE 350e."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes Active Parking Assist?",
+	"answer": "Active Parking Assist helps identify parking spaces and automatically steers your car into them."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Can Mercedes-Benz cars drive themselves?",
+	"answer": "Mercedes offers semi-autonomous driving features under its ‘Drive Pilot’ system in select models."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "How do I reset the service light on my Mercedes?",
+	"answer": "You can reset the service reminder from the steering wheel controls by navigating to the service menu and selecting 'Reset.'"
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz offer roadside assistance?",
+	"answer": "Yes, Mercedes provides 24-hour roadside assistance for the duration of the warranty period."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Are Mercedes parts expensive?",
+	"answer": "Genuine Mercedes parts can be more expensive than average, but they ensure performance and longevity."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Can I use regular fuel in my Mercedes?",
+	"answer": "Most Mercedes engines require premium unleaded fuel for optimal performance."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes-Benz AirMATIC?",
+	"answer": "AirMATIC is an adaptive air suspension system that adjusts ride height and comfort automatically."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz make convertibles?",
+	"answer": "Yes, Mercedes offers convertibles such as the C-Class Cabriolet, SL-Class, and AMG GT Roadster."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Are Mercedes cars good for winter?",
+	"answer": "Yes, especially models with 4MATIC all-wheel drive and heated features for better traction and comfort."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz have an app?",
+	"answer": "Yes, the Mercedes me app allows remote vehicle access, diagnostics, and maintenance tracking."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "How fuel-efficient are Mercedes vehicles?",
+	"answer": "Fuel efficiency varies by model, with diesel, hybrid, and EQ electric models offering the best economy."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Are Mercedes vehicles hand-built?",
+	"answer": "Some high-performance AMG engines are hand-built by a single technician following the 'One Man, One Engine' philosophy."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is the lifespan of a Mercedes engine?",
+	"answer": "With regular maintenance, a Mercedes engine can last over 300,000 km or more."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz make sports cars?",
+	"answer": "Yes, Mercedes-AMG develops high-performance sports cars like the AMG GT, SL, and C63 AMG."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What makes Mercedes-Benz luxurious?",
+	"answer": "High-quality materials, advanced technology, and precision engineering define Mercedes-Benz luxury."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Can I upgrade my Mercedes software?",
+	"answer": "Yes, most modern Mercedes vehicles receive software updates via over-the-air or at dealerships."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Is Mercedes-Benz involved in motorsport?",
+	"answer": "Yes, Mercedes-AMG competes in Formula 1 and other major racing events."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What does 'CLS' stand for?",
+	"answer": "CLS stands for 'Coupe Light Sport,' representing a luxury four-door coupe."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes-Benz’s flagship SUV?",
+	"answer": "The Mercedes GLS is the brand’s largest and most luxurious SUV."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "How do I know if my Mercedes has a recall?",
+	"answer": "Check the recall status by entering your VIN on the official Mercedes-Benz website."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What are common Mercedes-Benz problems?",
+	"answer": "Common issues include electronic malfunctions and air suspension leaks in older models."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "How long does the battery last in an EQ Mercedes?",
+	"answer": "Mercedes EQ batteries are designed to last around 8–10 years or 160,000 km."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Can I tow with a Mercedes-Benz SUV?",
+	"answer": "Yes, models like the GLE and GLS can tow between 3,500 and 7,700 pounds depending on configuration."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes offer extended warranties?",
+	"answer": "Yes, Mercedes offers extended limited warranty plans for additional peace of mind."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What’s the difference between C-Class and E-Class?",
+	"answer": "The E-Class is larger, more luxurious, and offers more advanced technology than the compact C-Class."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz use turbocharged engines?",
+	"answer": "Yes, nearly all Mercedes engines now feature turbocharging for better efficiency and power."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes-Benz’s smallest SUV?",
+	"answer": "The GLA is Mercedes-Benz’s most compact SUV, perfect for urban driving."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Can I charge my EQ Mercedes at home?",
+	"answer": "Yes, Mercedes offers home charging solutions and supports most Level 2 chargers."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes offer remote start?",
+	"answer": "Yes, remote start is available via the Mercedes me app for compatible models."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "How long has Mercedes-Benz been in business?",
+	"answer": "Mercedes-Benz has been producing cars since 1926, building on Karl Benz’s invention of the first automobile in 1886."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Are Mercedes-Benz vehicles made in Germany?",
+	"answer": "Yes, many are built in Germany, but production also occurs in the U.S., South Africa, and other countries."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What’s the top speed of the AMG GT?",
+	"answer": "Depending on the variant, the AMG GT can reach speeds up to 315 km/h (195 mph)."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz offer maintenance plans?",
+	"answer": "Yes, prepaid maintenance plans are available to cover routine services at reduced costs."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Can Mercedes-Benz vehicles run on biofuel?",
+	"answer": "Certain diesel models can use biodiesel blends, but always check your manual before refueling."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes make vans?",
+	"answer": "Yes, Mercedes-Benz produces commercial vans such as the Sprinter and Metris."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is the Mercedes-Benz A-Class known for?",
+	"answer": "The A-Class is known for its compact design, tech-filled cabin, and premium feel."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Can I buy accessories for my Mercedes online?",
+	"answer": "Yes, genuine Mercedes-Benz accessories are available online or through authorized dealers."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Are Mercedes-Benz interiors customizable?",
+	"answer": "Yes, Mercedes offers a wide range of upholstery, trim, and ambient lighting options."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz have electric SUVs?",
+	"answer": "Yes, the EQB, EQE SUV, and EQS SUV are part of Mercedes’ all-electric lineup."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Are Mercedes-Benz vehicles good for business executives?",
+	"answer": "Yes, models like the S-Class and E-Class are popular choices for executives due to luxury and comfort."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes offer over-the-air updates?",
+	"answer": "Yes, newer Mercedes models receive software and feature updates over the air."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Can Mercedes cars park themselves?",
+	"answer": "Yes, many models have active park assist, which automatically steers into parking spots."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Are Mercedes-Benz cars good investments?",
+	"answer": "Mercedes vehicles maintain value well compared to other luxury brands, especially AMG and G-Class models."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What does the ‘E’ stand for in E-Class?",
+	"answer": "The 'E' historically stood for 'Einspritzung,' meaning fuel injection in German."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz use start/stop technology?",
+	"answer": "Yes, automatic start/stop systems help reduce fuel consumption and emissions."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "What is Mercedes-Benz Intelligent Drive?",
+	"answer": "It’s a suite of safety and driver-assistance technologies that enhance comfort and awareness."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Does Mercedes-Benz provide car subscription services?",
+	"answer": "Yes, in select regions, Mercedes offers flexible car subscriptions that include insurance and maintenance."
+  },
+  {
+	"car_make": "Mercedes",
+	"question": "Are Mercedes-Benz cars connected to the internet?",
+	"answer": "Yes, most new models feature built-in connectivity for navigation, streaming, and remote"
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "What is Mercedes-Benz COMAND?",
+	"answer": "COMAND is Mercedes-Benz’s infotainment system that controls navigation, audio, and vehicle settings from a central interface."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "Can I use regular gasoline in my Mercedes-Benz?",
+	"answer": "Most Mercedes-Benz vehicles require premium unleaded gasoline with an octane rating of 91 or higher for optimal performance."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "Does Mercedes-Benz offer roadside assistance?",
+	"answer": "Yes, Mercedes-Benz offers 24-hour roadside assistance during the warranty period, covering towing, battery jump-starts, and flat tires."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "What is Mercedes-Benz 4MATIC?",
+	"answer": "4MATIC is Mercedes-Benz’s all-wheel-drive system that enhances traction, handling, and safety in all driving conditions."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "How long does a Mercedes-Benz engine last?",
+	"answer": "With proper care and maintenance, Mercedes-Benz engines can last 300,000 kilometers or more."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "What is Mercedes-Benz EQ Boost?",
+	"answer": "EQ Boost is a mild-hybrid system that provides additional power and improves fuel efficiency in select Mercedes models."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "How do I reset the service light on my Mercedes?",
+	"answer": "Use the steering wheel buttons to navigate to the service menu and select ‘Reset Service’ after completing maintenance."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "Does Mercedes-Benz offer electric vehicles?",
+	"answer": "Yes, Mercedes offers a full range of EVs under the EQ brand, such as the EQB, EQE, and EQS."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "What is the Mercedes-Benz AIRMATIC suspension?",
+	"answer": "AIRMATIC is an adaptive air suspension system that adjusts ride height and damping for comfort and performance."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "How often should I service my Mercedes-Benz?",
+	"answer": "Mercedes recommends Service A every 10,000 miles and Service B every 20,000 miles or annually."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "Can I lease a Mercedes-Benz?",
+	"answer": "Yes, Mercedes-Benz Financial Services offers leasing options with flexible terms and mileage plans."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "What is Mercedes me connect?",
+	"answer": "Mercedes me connect allows you to control and monitor your car remotely, track location, and schedule maintenance through an app."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "Which Mercedes is best for families?",
+	"answer": "The Mercedes-Benz GLE and GLS SUVs are spacious, luxurious, and well-suited for families."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "Are Mercedes vehicles expensive to insure?",
+	"answer": "Insurance costs are higher than average due to advanced technology and repair costs, but depend on model and driver profile."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "What does AMG stand for?",
+	"answer": "AMG stands for Aufrecht, Melcher, and Großaspach, the founders of Mercedes-Benz’s performance division."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "Are Mercedes-Benz vehicles reliable?",
+	"answer": "Modern Mercedes vehicles are highly reliable when maintained regularly, with many lasting over 15 years."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "What is the warranty on a Mercedes-Benz?",
+	"answer": "Mercedes-Benz offers a 4-year/50,000-mile new vehicle limited warranty."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "Does Mercedes-Benz make manual transmission cars?",
+	"answer": "Most modern Mercedes vehicles feature automatic or dual-clutch transmissions; manuals are rare today."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "Where are Mercedes-Benz vehicles manufactured?",
+	"answer": "Mercedes-Benz vehicles are made in Germany, the USA, South Africa, Hungary, and several other countries."
+  },
+  {
+	"car_make": "Mercedes-Benz",
+	"question": "Are Mercedes cars good for long-distance travel?",
+	"answer": "Yes, Mercedes cars are built for comfort, stability, and efficiency on long drives, especially their sedan and SUV models."
+  }
+]
