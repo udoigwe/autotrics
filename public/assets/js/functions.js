@@ -209,3 +209,44 @@ function getQueryParam(paramName) {
     const urlParams = new URLSearchParams(currentUrl.search);
     return urlParams.get(paramName);
 }
+
+//global function to pop smart driving tip up
+function popUpSmartDrivingTip() {
+    console.log("now");
+    blockUI();
+
+    $.ajax({
+        type: "GET",
+        url: "/assets/js/smart-tips.json",
+        dataType: "json",
+        success: function (tips) {
+            if (tips.length === 0) return;
+
+            const randomIndex = Math.floor(Math.random() * tips.length);
+            const tip = tips[randomIndex];
+            const tipMessage = tip.message;
+            const nextTime = new Date(Date.now() + 5 * 60 * 1000); //every 5 minutes
+            const nextTipTimeFormatted = nextTime.toLocaleTimeString();
+            const tipMessageWithNextTime = `${tip.message}<br><br><small>Next tip at: ${nextTipTimeFormatted}</small>`;
+
+            showSimpleHTMLMessage(tip.title, tipMessageWithNextTime, "success");
+            unblockUI();
+        },
+        error: function (req, status, error) {
+            unblockUI();
+            showSimpleMessage(
+                "Attention",
+                "Failed to load smart tips.",
+                "error"
+            );
+        },
+    });
+}
+
+// ✅ global function to Rotate tips every 1 minute
+function startTipRotation() {
+    // 10 minutes = 600,000 ms
+    // 1 minute = 60000 ms
+    // 5 minutes = 60000 ms
+    setInterval(popUpSmartDrivingTip, 300000);
+}
