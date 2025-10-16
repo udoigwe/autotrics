@@ -1,6 +1,7 @@
 const pool = require("../utils/dbConfig");
 const moment = require("moment");
 const CustomError = require("../utils/CustomError");
+const { logNotifications } = require("../utils/functions");
 
 module.exports = {
     createReminder: async (req, res, next) => {
@@ -71,6 +72,14 @@ module.exports = {
                 [user_id, car_id, reminder, interval_in_minutes]
             );
 
+            //notify user on this activity
+            await logNotifications(
+                req,
+                connection,
+                "Alert & Reminder Setup",
+                `${reminder} reminder has been set successfully for your ${car.car_make} ${car.car_model} ${car.car_year} model, successfully`
+            );
+
             //start db commit
             await connection.commit();
 
@@ -86,19 +95,30 @@ module.exports = {
             connection ? connection.release() : null;
         }
     },
-    updateCar: async (req, res, next) => {
-        const { car_make, car_model, car_milage, car_year } = req.body;
-        const { car_id } = req.params;
+    updateReminder: async (req, res, next) => {
+        const { car_id, reminder, interval_in_minutes, reminder_status } =
+            req.body;
+        const { reminder_id } = req.params;
 
         let connection;
 
+        //query to check the existence of the selected reminder
         let query = `
             SELECT *
-            FROM cars
-            WHERE car_id = ?
+            FROM alerts_and_reminders
+            WHERE reminder_id = ?
             LIMIT 1
         `;
-        const queryParams = [car_id];
+        const queryParams = [reminder_id];
+
+        //query to check if the selected reminder for the selected car exists
+        let query2 = `
+            SELECT *
+            FROM alerts_and_reminders
+            WHERE car_id = ? AND reminder = ? AND reminder_id != ?
+            LIMIT 1
+        `;
+        const queryParams2 = [car_id, reminder, reminder_id];
 
         try {
             // Get a connection from the pool
@@ -107,25 +127,49 @@ module.exports = {
             //start db transaction
             await connection.beginTransaction();
 
-            //check if car exists
-            const [cars] = await connection.execute(query, queryParams);
+            //check if reminder exists
+            const [reminders] = await connection.execute(query, queryParams);
 
-            if (cars.length === 0) {
-                throw new CustomError(404, "Selected car does not exist");
+            //check if reminder is duplicated for the same car
+            const [reminders2] = await connection.execute(query2, queryParams2);
+
+            if (reminders.length === 0) {
+                throw new CustomError(404, "Selected reminder does not exist");
             }
 
-            //update car details
+            if (reminders2.length > 0) {
+                throw new CustomError(
+                    404,
+                    `${reminder} already exists for the selected car`
+                );
+            }
+
+            //update reminder details
             await connection.execute(
                 `
-                    UPDATE cars
+                    UPDATE alerts_and_reminders
                     SET
-                        car_make = ?,
-                        car_model = ?,
-                        car_milage = ?,
-                        car_year = ?
-                    WHERE car_id = ?
+                        car_id = ?,
+                        reminder = ?,
+                        interval_in_minutes = ?,
+                        reminder_status = ?
+                    WHERE reminder_id = ?
                 `,
-                [car_make, car_model, car_milage, car_year, car_id]
+                [
+                    car_id,
+                    reminder,
+                    interval_in_minutes,
+                    reminder_status,
+                    reminder_id,
+                ]
+            );
+
+            //notify user on this activity
+            await logNotifications(
+                req,
+                connection,
+                "Alert & Reminder Update",
+                `Your reminder has been updated successfully`
             );
 
             //start db commit
@@ -133,7 +177,7 @@ module.exports = {
 
             res.json({
                 error: false,
-                message: `Your vehicle has been updated successfully`,
+                message: `Your reminder has been updated successfully`,
             });
         } catch (e) {
             connection ? connection.rollback() : null;
@@ -143,18 +187,18 @@ module.exports = {
             connection ? connection.release() : null;
         }
     },
-    deleteCar: async (req, res, next) => {
-        const { car_id } = req.params;
+    deleteReminder: async (req, res, next) => {
+        const { reminder_id } = req.params;
 
         let connection;
 
         let query = `
             SELECT *
-            FROM cars
-            WHERE car_id = ?
+            FROM alerts_and_reminders
+            WHERE reminder_id = ?
             LIMIT 1
         `;
-        const queryParams = [car_id];
+        const queryParams = [reminder_id];
 
         try {
             // Get a connection from the pool
@@ -163,20 +207,28 @@ module.exports = {
             //start db transaction
             await connection.beginTransaction();
 
-            //check if car exists
-            const [cars] = await connection.execute(query, queryParams);
+            //check if reminder exists
+            const [reminders] = await connection.execute(query, queryParams);
 
-            if (cars.length === 0) {
-                throw new CustomError(404, "Selected car does not exist");
+            if (reminders.length === 0) {
+                throw new CustomError(404, "Selected reminder does not exist");
             }
 
-            //delete car
+            //delete reminder
             await connection.execute(
                 `
-                    DELETE FROM cars
-                    WHERE car_id = ?
+                    DELETE FROM alerts_and_reminders
+                    WHERE reminder_id = ?
                 `,
-                [car_id]
+                [reminder_id]
+            );
+
+            //notify user on this activity
+            await logNotifications(
+                req,
+                connection,
+                "Alert & Reminder Removal",
+                `Your reminder has been deleted successfully`
             );
 
             //start db commit
@@ -184,7 +236,7 @@ module.exports = {
 
             res.json({
                 error: false,
-                message: `Your vehicle has been deleted successfully`,
+                message: `Your reminder has been deleted successfully`,
             });
         } catch (e) {
             connection ? connection.rollback() : null;
@@ -194,24 +246,32 @@ module.exports = {
             connection ? connection.release() : null;
         }
     },
-    getAllCars: async (req, res, next) => {
-        const { car_id, user_id } = req.query;
+    getAllReminders: async (req, res, next) => {
+        const { reminder_id, car_id, user_id, reminder_status } = req.query;
 
         const page = req.query.page ? parseInt(req.query.page) : null;
         const perPage = req.query.perPage ? parseInt(req.query.perPage) : null;
 
         let query = `
             SELECT *
-            FROM cars 
+            FROM alerts_and_reminders_view
             WHERE 1 = 1`;
         const queryParams = [];
 
         let query2 = `
             SELECT COUNT(*) AS total_records 
-            FROM cars 
+            FROM alerts_and_reminders_view 
             WHERE 1 = 1
         `;
         const queryParams2 = [];
+
+        if (reminder_id) {
+            query += " AND reminder_id = ?";
+            queryParams.push(reminder_id);
+
+            query2 += " AND reminder_id = ?";
+            queryParams2.push(reminder_id);
+        }
 
         if (car_id) {
             query += " AND car_id = ?";
@@ -229,7 +289,15 @@ module.exports = {
             queryParams2.push(user_id);
         }
 
-        query += " ORDER BY car_id DESC";
+        if (reminder_status) {
+            query += " AND reminder_status = ?";
+            queryParams.push(reminder_status);
+
+            query2 += " AND reminder_status = ?";
+            queryParams2.push(reminder_status);
+        }
+
+        query += " ORDER BY reminder_id DESC";
 
         if (page && perPage) {
             const offset = (page - 1) * perPage;
@@ -279,6 +347,69 @@ module.exports = {
             if (connection) {
                 connection.release();
             }
+        }
+    },
+    updateReminderStatus: async (req, res, next) => {
+        const { reminder_status } = req.body;
+        const { reminder_id } = req.params;
+
+        let connection;
+
+        //query to check the existence of the selected reminder
+        let query = `
+            SELECT *
+            FROM alerts_and_reminders_view
+            WHERE reminder_id = ?
+            LIMIT 1
+        `;
+        const queryParams = [reminder_id];
+
+        try {
+            // Get a connection from the pool
+            connection = await pool.getConnection();
+
+            //start db transaction
+            await connection.beginTransaction();
+
+            //check if reminder exists
+            const [reminders] = await connection.execute(query, queryParams);
+
+            if (reminders.length === 0) {
+                throw new CustomError(404, "Selected reminder does not exist");
+            }
+
+            //update reminder status details
+            await connection.execute(
+                `
+                    UPDATE alerts_and_reminders
+                    SET
+                        reminder_status = ?
+                    WHERE reminder_id = ?
+                `,
+                [reminder_status, reminder_id]
+            );
+
+            //notify user on this activity
+            await logNotifications(
+                req,
+                connection,
+                "Alert & Reminder Status Update",
+                `${reminders[0].reminder} scheduled reminder for your ${reminders[0].car_make} ${reminders[0].car_model} ${reminders[0].car_year} has been updated successfully`
+            );
+
+            //start db commit
+            await connection.commit();
+
+            res.json({
+                error: false,
+                message: `Your reminder status has been updated successfully`,
+            });
+        } catch (e) {
+            connection ? connection.rollback() : null;
+
+            next(e);
+        } finally {
+            connection ? connection.release() : null;
         }
     },
 };
