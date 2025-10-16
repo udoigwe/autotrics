@@ -17,5 +17,6 @@ router.get("/profile", viewsController.profile);
 router.get("/smart-assistant", viewsController.smartAssistant);
 router.get("/mechanic-finder", viewsController.mechanicFinder);
 router.get("/faq", viewsController.faq);
+router.get("/alerts-and-reminders", viewsController.alerts);
 
 module.exports = router;
