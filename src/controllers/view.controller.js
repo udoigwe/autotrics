@@ -43,14 +43,19 @@ module.exports = {
             title: "My Profile | Autotrics",
         });
     },
-    knowledgeHub: async (req, res) => {
-        res.render("knowledge-hub", {
-            title: "Knowledge Hub | Autotrics",
+    smartAssistant: async (req, res) => {
+        res.render("smart-assistant", {
+            title: "Vehicle Smart Assistant | Autotrics",
         });
     },
     mechanicFinder: async (req, res) => {
         res.render("mechanic-finder", {
             title: "Mechanic Finder | Autotrics",
+        });
+    },
+    faq: async (req, res) => {
+        res.render("faq", {
+            title: "FAQs | Autotrics",
         });
     },
 };

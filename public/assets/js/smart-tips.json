@@ -1,0 +1,410 @@
+[
+  {
+    "title": "Maintain a Safe Following Distance",
+    "message": "Keep at least a three-second gap between you and the car in front to allow enough time to react in case of sudden stops."
+  },
+  {
+    "title": "Use Turn Signals Early",
+    "message": "Always signal your turns and lane changes well in advance to inform other drivers of your intentions."
+  },
+  {
+    "title": "Check Mirrors Frequently",
+    "message": "Regularly glance at your rearview and side mirrors to stay aware of surrounding traffic conditions."
+  },
+  {
+    "title": "Avoid Sudden Braking",
+    "message": "Brake smoothly and gradually whenever possible to maintain control and reduce wear on your brake pads."
+  },
+  {
+    "title": "Keep Both Hands on the Wheel",
+    "message": "Maintain the '9 and 3' or '10 and 2' hand positions for maximum steering control."
+  },
+  {
+    "title": "Obey Speed Limits",
+    "message": "Speed limits are designed for safety; follow them based on road, weather, and traffic conditions."
+  },
+  {
+    "title": "Avoid Distractions",
+    "message": "Do not text, eat, or use your phone while driving. Focus entirely on the road."
+  },
+  {
+    "title": "Adjust Your Mirrors Before Driving",
+    "message": "Ensure all mirrors are positioned to eliminate blind spots before you start moving."
+  },
+  {
+    "title": "Wear Your Seat Belt",
+    "message": "Always buckle up before starting your vehicle — it can save your life in a crash."
+  },
+  {
+    "title": "Plan Your Route Ahead",
+    "message": "Use GPS or a map to plan your route before starting your journey to avoid last-minute turns or confusion."
+  },
+  {
+    "title": "Don’t Drive When Tired",
+    "message": "Fatigue slows reaction times and reduces focus; rest before driving if you feel drowsy."
+  },
+  {
+    "title": "Keep a Safe Speed in Rain",
+    "message": "Wet roads reduce traction — slow down and avoid sudden maneuvers."
+  },
+  {
+    "title": "Avoid Tailgating",
+    "message": "Following too closely gives you less time to react. Keep a safe distance at all times."
+  },
+  {
+    "title": "Use Headlights Wisely",
+    "message": "Turn on your headlights at dusk, during rain, or in tunnels for better visibility."
+  },
+  {
+    "title": "Don’t Drive Under the Influence",
+    "message": "Never drive after consuming alcohol or drugs that impair your judgment and reflexes."
+  },
+  {
+    "title": "Check Tire Pressure Regularly",
+    "message": "Maintain correct tire pressure for better fuel efficiency, safety, and tire longevity."
+  },
+  {
+    "title": "Use Defensive Driving Techniques",
+    "message": "Anticipate potential hazards and assume that other drivers might make mistakes."
+  },
+  {
+    "title": "Keep a Safe Speed on Curves",
+    "message": "Slow down before entering curves to prevent skidding or losing control."
+  },
+  {
+    "title": "Use Parking Brakes on Inclines",
+    "message": "Engage the parking brake when parked on a hill to prevent your car from rolling."
+  },
+  {
+    "title": "Check Blind Spots",
+    "message": "Always check over your shoulder before changing lanes or merging."
+  },
+  {
+    "title": "Don’t Block Intersections",
+    "message": "Only enter intersections when you’re sure you can clear them without stopping in the middle."
+  },
+  {
+    "title": "Keep Your Vehicle Maintained",
+    "message": "Regularly service your car to ensure safe and efficient performance."
+  },
+  {
+    "title": "Be Patient with New Drivers",
+    "message": "Give learners extra space and don’t honk or pressure them unnecessarily."
+  },
+  {
+    "title": "Watch for Pedestrians",
+    "message": "Be extra cautious in crosswalks, near schools, and residential areas."
+  },
+  {
+    "title": "Avoid Road Rage",
+    "message": "Stay calm and courteous, even if other drivers act aggressively."
+  },
+  {
+    "title": "Don’t Drive Too Slowly",
+    "message": "Driving significantly below the speed limit can disrupt traffic and cause accidents."
+  },
+  {
+    "title": "Use Low Beams in Fog",
+    "message": "High beams can reflect off fog and reduce visibility; use low beams instead."
+  },
+  {
+    "title": "Avoid Hard Acceleration",
+    "message": "Accelerate smoothly to improve fuel efficiency and maintain control."
+  },
+  {
+    "title": "Respect Emergency Vehicles",
+    "message": "Pull over to let ambulances, fire trucks, and police vehicles pass safely."
+  },
+  {
+    "title": "Keep Windows Clean",
+    "message": "Dirty windows reduce visibility — clean them regularly inside and out."
+  },
+  {
+    "title": "Adjust Seat and Steering Position",
+    "message": "Sit comfortably with a clear view of the road and easy access to pedals."
+  },
+  {
+    "title": "Check Weather Before Traveling",
+    "message": "Plan your trips based on weather forecasts to avoid dangerous conditions."
+  },
+  {
+    "title": "Avoid Sudden Lane Changes",
+    "message": "Always signal and check mirrors before switching lanes."
+  },
+  {
+    "title": "Use Cruise Control Wisely",
+    "message": "On highways, use cruise control to maintain consistent speed and save fuel."
+  },
+  {
+    "title": "Stay in the Right Lane Unless Passing",
+    "message": "Use the left lane only for overtaking, then return to the right."
+  },
+  {
+    "title": "Keep Both Eyes on the Road",
+    "message": "Scanning the road ahead helps identify hazards early and prevents surprises."
+  },
+  {
+    "title": "Be Extra Careful at Night",
+    "message": "Visibility decreases at night; slow down and stay alert for pedestrians and animals."
+  },
+  {
+    "title": "Avoid Puddles at High Speed",
+    "message": "Driving fast through water can cause hydroplaning and loss of control."
+  },
+  {
+    "title": "Use Child Safety Seats Properly",
+    "message": "Ensure car seats are correctly installed and suited for your child’s age and size."
+  },
+  {
+    "title": "Be Predictable",
+    "message": "Avoid sudden moves; drive in a way others can anticipate your actions."
+  },
+  {
+    "title": "Inspect Lights Regularly",
+    "message": "Ensure all headlights, brake lights, and turn signals work properly."
+  },
+  {
+    "title": "Don’t Ride the Clutch",
+    "message": "Keep your foot off the clutch pedal unless you’re shifting gears to avoid wear."
+  },
+  {
+    "title": "Avoid Overloading Your Car",
+    "message": "Carrying excessive weight reduces braking performance and fuel efficiency."
+  },
+  {
+    "title": "Look Far Ahead While Driving",
+    "message": "Focus not just on the car in front but several vehicles ahead for early reaction."
+  },
+  {
+    "title": "Keep Emergency Supplies",
+    "message": "Have a first aid kit, flashlight, jumper cables, and spare tire in your vehicle."
+  },
+  {
+    "title": "Use Handbrake on Slopes",
+    "message": "Prevent rolling backward by engaging the handbrake on steep inclines."
+  },
+  {
+    "title": "Avoid Aggressive Driving",
+    "message": "Sudden lane changes and tailgating increase accident risk and stress."
+  },
+  {
+    "title": "Stay Off the Shoulder",
+    "message": "Only use the road shoulder for emergencies, not as a shortcut or passing lane."
+  },
+  {
+    "title": "Keep a Cool Temper",
+    "message": "Anger affects judgment. Take deep breaths if frustrated behind the wheel."
+  },
+  {
+    "title": "Always Have Fuel Reserve",
+    "message": "Avoid running your tank too low; it can damage the fuel pump and leave you stranded."
+  },
+  {
+    "title": "Respect Traffic Lights",
+    "message": "Never run red lights — they’re a leading cause of serious collisions."
+  },
+  {
+    "title": "Avoid Using Headphones",
+    "message": "Headphones block ambient sounds like sirens or horns, which can be dangerous."
+  },
+  {
+    "title": "Don’t Block Driveways",
+    "message": "Be considerate and park responsibly without obstructing other vehicles."
+  },
+  {
+    "title": "Use Air Conditioning Wisely",
+    "message": "At low speeds, open windows save fuel; at high speeds, AC is more efficient."
+  },
+  {
+    "title": "Stay Calm in Traffic Jams",
+    "message": "Avoid weaving between lanes; stay patient and focused."
+  },
+  {
+    "title": "Avoid Flooded Roads",
+    "message": "Never drive through deep water — it can stall your engine or sweep your car away."
+  },
+  {
+    "title": "Watch for Cyclists",
+    "message": "Check mirrors and blind spots before opening your door or turning."
+  },
+  {
+    "title": "Avoid Driving Barefoot",
+    "message": "Shoes provide better pedal control and safety."
+  },
+  {
+    "title": "Use Your Horn Sparingly",
+    "message": "Only honk to alert others of danger, not out of frustration."
+  },
+  {
+    "title": "Avoid Sudden Steering Movements",
+    "message": "Sharp turns at high speeds can cause loss of control."
+  },
+  {
+    "title": "Keep a Safe Distance from Trucks",
+    "message": "Large vehicles have blind spots; don’t tailgate or linger beside them."
+  },
+  {
+    "title": "Use Proper Lane Discipline",
+    "message": "Stay in your lane and signal before changing lanes or merging."
+  },
+  {
+    "title": "Check Fluid Levels Regularly",
+    "message": "Ensure engine oil, coolant, and brake fluid are topped up to avoid breakdowns."
+  },
+  {
+    "title": "Be Cautious in Residential Areas",
+    "message": "Drive slowly; children or pets may appear unexpectedly."
+  },
+  {
+    "title": "Adjust Speed in Heavy Traffic",
+    "message": "Maintain a steady, slow pace to avoid frequent braking and acceleration."
+  },
+  {
+    "title": "Avoid Idling Too Long",
+    "message": "Turn off your engine if stopped for more than a minute to save fuel."
+  },
+  {
+    "title": "Keep Headlights Aligned",
+    "message": "Misaligned headlights reduce visibility and blind other drivers."
+  },
+  {
+    "title": "Never Reverse Without Looking",
+    "message": "Turn your head and check mirrors carefully before backing up."
+  },
+  {
+    "title": "Stay Alert at Traffic Lights",
+    "message": "Be prepared to move but check cross traffic before proceeding on green."
+  },
+  {
+    "title": "Don’t Drive in Flip-Flops",
+    "message": "They can slip off and get stuck under the pedals."
+  },
+  {
+    "title": "Avoid Sudden Stops on Highways",
+    "message": "If you must pull over, move completely off the road and use hazard lights."
+  },
+  {
+    "title": "Plan Rest Breaks on Long Trips",
+    "message": "Stop every two hours to stretch and refresh your focus."
+  },
+  {
+    "title": "Use GPS Responsibly",
+    "message": "Set your destination before driving, not while in motion."
+  },
+  {
+    "title": "Check Tire Tread Depth",
+    "message": "Replace tires that have worn below safe tread limits to avoid skidding."
+  },
+  {
+    "title": "Avoid Bright Dashboard Lights at Night",
+    "message": "Dim your dashboard to improve visibility and reduce glare."
+  },
+  {
+    "title": "Maintain Proper Posture",
+    "message": "Sit upright with both hands on the wheel to reduce fatigue and improve control."
+  },
+  {
+    "title": "Avoid Using Rear Fog Lights in Clear Weather",
+    "message": "They can dazzle drivers behind you; use them only in dense fog."
+  },
+  {
+    "title": "Keep Left on Multi-Lane Roads",
+    "message": "Use the left lane for slower traffic and right lane for overtaking only."
+  },
+  {
+    "title": "Know Your Car’s Braking Distance",
+    "message": "Understand how long it takes your car to stop under different conditions."
+  },
+  {
+    "title": "Avoid Driving with Low Visibility",
+    "message": "If you can’t see well, pull over safely and wait until conditions improve."
+  },
+  {
+    "title": "Use Defoggers When Needed",
+    "message": "Keep windows clear for maximum visibility during rain or cold weather."
+  },
+  {
+    "title": "Stay Focused at Intersections",
+    "message": "Look both ways before proceeding, even on green."
+  },
+  {
+    "title": "Avoid Cruise Control in Heavy Rain",
+    "message": "It can cause loss of traction during hydroplaning."
+  },
+  {
+    "title": "Be Careful on Gravel Roads",
+    "message": "Reduce speed and avoid sudden turns to prevent skidding."
+  },
+  {
+    "title": "Avoid Overconfidence",
+    "message": "Even experienced drivers should stay cautious and follow traffic rules."
+  },
+  {
+    "title": "Inspect Brakes Often",
+    "message": "Listen for squealing or grinding noises; they signal brake wear."
+  },
+  {
+    "title": "Know Emergency Procedures",
+    "message": "Learn how to handle skids, brake failure, or tire blowouts safely."
+  },
+  {
+    "title": "Keep Windshield Wipers Functional",
+    "message": "Replace worn blades to maintain clear visibility during rain."
+  },
+  {
+    "title": "Use Turnouts to Let Others Pass",
+    "message": "If traffic builds up behind you, pull aside to let faster vehicles pass."
+  },
+  {
+    "title": "Avoid Blocking the Fast Lane",
+    "message": "If cars are overtaking you on the right, move over to the slower lane."
+  },
+  {
+    "title": "Drive Smoothly",
+    "message": "Avoid jerky steering, acceleration, and braking for better fuel economy and comfort."
+  },
+  {
+    "title": "Keep Focus on the Road Ahead",
+    "message": "Avoid staring at nearby distractions like billboards or accidents."
+  },
+  {
+    "title": "Respect Weather Conditions",
+    "message": "Slow down during rain, fog, or snow to maintain traction and visibility."
+  },
+  {
+    "title": "Stay Calm After an Accident",
+    "message": "Move to a safe area, check for injuries, and exchange information calmly."
+  },
+  {
+    "title": "Know the Right-of-Way Rules",
+    "message": "Understanding who goes first helps prevent intersection collisions."
+  },
+  {
+    "title": "Avoid Resting Hand on Gear Lever",
+    "message": "It adds pressure to transmission components; keep both hands on the wheel."
+  },
+  {
+    "title": "Avoid Heavy Braking on Downhill Roads",
+    "message": "Use lower gears to control speed and prevent brake overheating."
+  },
+  {
+    "title": "Regularly Clean Your Headlights",
+    "message": "Dirt and grime can reduce brightness by up to 50%."
+  },
+  {
+    "title": "Know Your Vehicle Dimensions",
+    "message": "Understanding your car’s width and length helps with parking and tight spaces."
+  },
+  {
+    "title": "Avoid Using High Beams Near Other Cars",
+    "message": "Dim your lights when approaching oncoming traffic to avoid blinding drivers."
+  },
+  {
+    "title": "Keep an Eye on the Fuel Gauge",
+    "message": "Refuel before the tank runs too low to prevent engine or pump damage."
+  },
+  {
+    "title": "Anticipate Traffic Flow",
+    "message": "Look ahead for brake lights or slow-moving vehicles to adjust speed early."
+  }
+]
