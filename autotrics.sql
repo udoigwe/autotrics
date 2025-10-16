@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2025 at 12:44 AM
+-- Generation Time: Oct 16, 2025 at 07:47 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,22 @@ SET time_zone = "+00:00";
 --
 -- Database: `autotrics`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `alerts_and_reminders`
+--
+
+CREATE TABLE `alerts_and_reminders` (
+  `reminder_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `car_id` int(11) NOT NULL,
+  `reminder` varchar(255) NOT NULL,
+  `interval_in_minutes` int(11) NOT NULL,
+  `last_reminded_on` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `reminder_status` enum('Active','Inactive') NOT NULL DEFAULT 'Active'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -110,6 +126,14 @@ INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `gender`, `phone`, `e
 --
 
 --
+-- Indexes for table `alerts_and_reminders`
+--
+ALTER TABLE `alerts_and_reminders`
+  ADD PRIMARY KEY (`reminder_id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `car_id` (`car_id`);
+
+--
 -- Indexes for table `cars`
 --
 ALTER TABLE `cars`
@@ -132,6 +156,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `alerts_and_reminders`
+--
+ALTER TABLE `alerts_and_reminders`
+  MODIFY `reminder_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cars`
