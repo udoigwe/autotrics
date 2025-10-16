@@ -58,4 +58,9 @@ module.exports = {
             title: "FAQs | Autotrics",
         });
     },
+    alerts: async (req, res) => {
+        res.render("alerts-and-reminders", {
+            title: "Alerts & Reminders | Autotrics",
+        });
+    },
 };
