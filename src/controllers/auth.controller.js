@@ -2,7 +2,7 @@ const pool = require("../utils/dbConfig");
 const jwt = require("jsonwebtoken");
 const moment = require("moment");
 const CustomError = require("../utils/CustomError");
-const { sendMail, uuidv4 } = require("../utils/functions");
+const { sendMail, uuidv4, logNotifications } = require("../utils/functions");
 const { otpHTML, recoveryHTML } = require("../utils/emailTemplates");
 
 module.exports = {
@@ -461,6 +461,14 @@ module.exports = {
 
             const user = users[0];
 
+            //notify user on this activity
+            await logNotifications(
+                req,
+                connection,
+                "Profile Update",
+                "User Profile Updated successfully"
+            );
+
             //commit to db
             await connection.commit();
 
@@ -494,6 +502,9 @@ module.exports = {
         try {
             //instantiate db
             connection = await pool.getConnection();
+
+            //start db transaction
+            await connection.beginTransaction();
 
             //get current password
             const [users] = await connection.execute(
@@ -529,11 +540,24 @@ module.exports = {
                 [new_password, loggedUser.user_id]
             );
 
+            //notify user on this activity
+            await logNotifications(
+                req,
+                connection,
+                "Password Update",
+                "Password updated successfully"
+            );
+
+            //commit to db
+            await connection.commit();
+
             res.json({
                 error: false,
                 message: "Password updated successfully",
             });
         } catch (e) {
+            connection ? await connection.rollback() : null;
+
             next(e);
         } finally {
             connection ? connection.release() : null;

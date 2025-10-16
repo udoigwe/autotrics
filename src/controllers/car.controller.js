@@ -1,6 +1,7 @@
 const pool = require("../utils/dbConfig");
 const moment = require("moment");
 const CustomError = require("../utils/CustomError");
+const { logNotifications } = require("../utils/functions");
 
 module.exports = {
     createCar: async (req, res, next) => {
@@ -30,6 +31,14 @@ module.exports = {
                     VALUES (?, ?, ?, ?, ?)
                 `,
                 [user_id, car_make, car_model, car_milage, car_year]
+            );
+
+            //notify user on this activity
+            await logNotifications(
+                req,
+                connection,
+                "Vehicle Profiling",
+                `Your ${car_make} ${car_model} ${car_year} model vehicle has been profiled successfully`
             );
 
             //start db commit
@@ -89,6 +98,14 @@ module.exports = {
                 [car_make, car_model, car_milage, car_year, car_id]
             );
 
+            //notify user on this activity
+            await logNotifications(
+                req,
+                connection,
+                "Vehicle Profile Update",
+                `Your ${car_make} ${car_model} ${car_year} model profile has been updated successfully`
+            );
+
             //start db commit
             await connection.commit();
 
@@ -138,6 +155,14 @@ module.exports = {
                     WHERE car_id = ?
                 `,
                 [car_id]
+            );
+
+            //notify user on this activity
+            await logNotifications(
+                req,
+                connection,
+                "Vehicle Delete",
+                `Your ${cars[0].car_make} ${cars[0].car_model} ${cars[0].car_year} model profile has been deleted successfully`
             );
 
             //start db commit
