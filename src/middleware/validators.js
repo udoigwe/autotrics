@@ -2,6 +2,7 @@ const { validate } = require("../utils/functions");
 const authValidations = require("../validations/auth.validation");
 const carValidations = require("../validations/car.validation");
 const chatValidations = require("../validations/chat.validation");
+const reminderValidations = require("../validations/reminder.validation");
 
 module.exports = {
     /* Auth route validators */
@@ -20,6 +21,12 @@ module.exports = {
     createCar: validate(carValidations.createCar),
     updateCar: validate(carValidations.updateCar),
     deleteCar: validate(carValidations.deleteCar),
+
+    /* Reminder route validators */
+    createReminder: validate(reminderValidations.createReminder),
+    updateReminder: validate(reminderValidations.updateReminder),
+    updateReminderStatus: validate(reminderValidations.updateReminderStatus),
+    deleteReminder: validate(reminderValidations.deleteReminder),
 
     /* Chat route validators */
     createChat: validate(chatValidations.createChat),
