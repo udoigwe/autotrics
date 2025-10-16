@@ -138,3 +138,48 @@ exports.sendMail = async (to, subject, html) => {
         throw e;
     }
 };
+
+exports.logNotifications = async (req, connection, title, message) => {
+    //get the token
+    const token = req?.headers["x-access-token"];
+    //get decoded token
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    //current timestamp
+    const now = moment().format("YYYY-MM-DD HH:mm:ss");
+
+    const user = decoded;
+
+    try {
+        await connection.execute(
+            `
+                INSERT INTO notifications 
+                (
+                    user_id, 
+                    title,
+                    message
+                ) VALUES (?, ?, ?)
+            `,
+            [user.user_id, title, message]
+        );
+    } catch (e) {
+        throw e;
+    }
+};
+
+exports.logNotifications2 = async (userID, connection, title, message) => {
+    try {
+        await connection.execute(
+            `
+                INSERT INTO notifications 
+                (
+                    user_id, 
+                    title,
+                    message
+                ) VALUES (?, ?, ?)
+            `,
+            [userID, title, message]
+        );
+    } catch (e) {
+        throw e;
+    }
+};
