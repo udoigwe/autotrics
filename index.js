@@ -32,12 +32,18 @@ app.set("views", "./src/views");
 const authRoutes = require("./src/routes/auth");
 const carRoutes = require("./src/routes/car");
 const chatRoutes = require("./src/routes/chat");
+const reminderRoutes = require("./src/routes/reminder");
 /*const applicationRoutes = require("./src/routes/application");
 const postRoutes = require("./src/routes/post"); */
 const errorHandler = require("./src/middleware/errorHandler");
 
 //importing all view routes
 const viewRoutes = require("./src/routes/view");
+
+//importing all cron jobs
+const {
+    sendScheduledRemindersAndAlertsCron,
+} = require("./src/services/reminders.service");
 
 // Parse YAML Swagger documentation to JSON
 //const swaggerFile = fs.readFileSync("./src/documentation/swagger.yaml", "utf8");
@@ -47,8 +53,8 @@ const viewRoutes = require("./src/routes/view");
 app.use(process.env.ROUTE_PREFIX, authRoutes);
 app.use(process.env.ROUTE_PREFIX, carRoutes);
 app.use(process.env.ROUTE_PREFIX, chatRoutes);
-/*app.use(process.env.ROUTE_PREFIX, applicationRoutes);
-app.use(process.env.ROUTE_PREFIX, postRoutes); */
+app.use(process.env.ROUTE_PREFIX, reminderRoutes);
+/*app.use(process.env.ROUTE_PREFIX, postRoutes); */
 
 //using imported view routes
 app.use(viewRoutes);
@@ -56,6 +62,9 @@ app.use(viewRoutes);
 // Serve Swagger documentation at /api/docs
 //app.use(process.env.API_DOCS_ROUTE_PREFIX, swaggerUi.serve);
 //app.get(process.env.API_DOCS_ROUTE_PREFIX, swaggerUi.setup(swaggerDocument));
+
+//run sheduled alerts for maintenance
+sendScheduledRemindersAndAlertsCron();
 
 // Use the errorHandler middleware
 app.use(errorHandler);
