@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2025 at 07:47 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Oct 16, 2025 at 06:18 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,13 +29,48 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `alerts_and_reminders` (
   `reminder_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `car_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `car_id` int(11) DEFAULT NULL,
   `reminder` varchar(255) NOT NULL,
   `interval_in_minutes` int(11) NOT NULL,
-  `last_reminded_on` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `reminder_status` enum('Active','Inactive') NOT NULL DEFAULT 'Active'
+  `last_reminded_on` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
+  `reminder_status` enum('Active','Inactive') NOT NULL DEFAULT 'Active',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `alerts_and_reminders`
+--
+
+INSERT INTO `alerts_and_reminders` (`reminder_id`, `user_id`, `car_id`, `reminder`, `interval_in_minutes`, `last_reminded_on`, `reminder_status`, `created_at`) VALUES
+(1, 2, 2, 'Scheduled Maintenance', 1, '2025-10-16 13:19:11', 'Inactive', '2025-10-16 13:35:00'),
+(2, 2, 1, 'Scheduled Maintenance', 1, '2025-10-16 15:03:58', 'Inactive', '2025-10-16 13:35:00'),
+(4, 2, NULL, 'Brake Pad Maintenance', 1, '2025-10-16 15:03:50', 'Inactive', '2025-10-16 13:35:00'),
+(5, 2, NULL, 'Fuel Guage Maintenance', 1, '2025-10-16 16:17:58', 'Inactive', '2025-10-16 13:35:00');
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `alerts_and_reminders_view`
+-- (See below for the actual view)
+--
+CREATE TABLE `alerts_and_reminders_view` (
+`reminder_id` int(11)
+,`user_id` int(11)
+,`car_id` int(11)
+,`reminder` varchar(255)
+,`interval_in_minutes` int(11)
+,`last_reminded_on` timestamp
+,`reminder_status` enum('Active','Inactive')
+,`created_at` timestamp
+,`first_name` varchar(255)
+,`last_name` varchar(255)
+,`email` varchar(255)
+,`car_make` varchar(255)
+,`car_model` varchar(255)
+,`car_year` varchar(255)
+,`car_milage` varchar(255)
+);
 
 -- --------------------------------------------------------
 
@@ -45,7 +80,7 @@ CREATE TABLE `alerts_and_reminders` (
 
 CREATE TABLE `cars` (
   `car_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
   `car_make` varchar(255) NOT NULL,
   `car_model` varchar(255) NOT NULL,
   `car_milage` varchar(255) NOT NULL,
@@ -60,7 +95,7 @@ CREATE TABLE `cars` (
 INSERT INTO `cars` (`car_id`, `user_id`, `car_make`, `car_model`, `car_milage`, `car_year`, `created_at`) VALUES
 (1, 2, 'Toyota', 'Camry', '123', '2003', '2025-10-08 12:20:08'),
 (2, 2, 'Toyota', 'Matrix', '13000', '2001', '2025-10-11 19:04:27'),
-(4, 2, 'Toyota', 'Hilux', '123000', '2021', '2025-10-11 21:01:54');
+(6, 2, 'Toyota', 'Avalon', '123000', '2003', '2025-10-16 15:49:10');
 
 -- --------------------------------------------------------
 
@@ -70,7 +105,7 @@ INSERT INTO `cars` (`car_id`, `user_id`, `car_make`, `car_model`, `car_milage`, 
 
 CREATE TABLE `knowledge_hub_chats` (
   `message_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
   `sender_role` enum('user','assistant') NOT NULL DEFAULT 'user',
   `message` longtext NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
@@ -91,6 +126,36 @@ INSERT INTO `knowledge_hub_chats` (`message_id`, `user_id`, `sender_role`, `mess
 (20, 2, 'assistant', 'Okay, I understand. You\'re looking for information about a routine checkup for your vehicle. To give you the best information, I need a little more detail. Could you tell me:\n\n*   **What kind of vehicle do you have?** (Make, model, and year are helpful)\n*   **Do you have an idea of what you want to have checked/inspected?** (e.g., just a basic safety check, or something more comprehensive?)\n*   **Are you looking to DIY (Do It Yourself) or take it to a professional?**\n*   **Where are you located?** (This helps me find local shops and provide price estimates)\n\nIn the meantime, here\'s a general overview of what a routine vehicle checkup usually involves:\n\n**Typical Items Included in a Routine Vehicle Checkup:**\n\n*   **Fluid Levels:**\n    *   Engine oil\n    *   Coolant (antifreeze)\n    *   Brake fluid\n    *   Power steering fluid\n    *   Windshield washer fluid\n    *   Transmission fluid (may or may not be checked depending on the type of transmission)\n*   **Filters:**\n    *   Engine air filter\n    *   Cabin air filter (if equipped)\n    *   Fuel filter (may or may not be checked/replaced)\n*   **Lights:**\n    *   Headlights (high and low beams)\n    *   Taillights\n    *   Brake lights\n    *   Turn signals (front and rear)\n    *   Parking lights\n    *   Hazard lights\n    *   Interior lights\n*   **Tires:**\n    *   Tire pressure\n    *   Tread depth\n    *   Visual inspection for wear and damage\n*   **Brakes:**\n    *   Visual inspection of brake pads/shoes, rotors/drums, and brake lines\n*   **Battery:**\n    *   Battery condition (voltage and load test)\n    *   Terminal connections\n*   **Belts and Hoses:**\n    *   Visual inspection for cracks, wear, and leaks\n*   **Suspension and Steering:**\n    *   Visual inspection of shocks/struts, ball joints, tie rod ends, and steering components\n*   **Exhaust System:**\n    *   Visual inspection for leaks, damage, and corrosion\n*   **Wipers:**\n    *   Condition of wiper blades\n*   **Diagnostics:**\n    *   Scanning the vehicle\'s computer for any stored error codes (check engine light)\n\n**DIY vs. Professional:**\n\n*   **DIY:** If you\'re comfortable with basic car maintenance, you can check some of these items yourself (like fluid levels, lights, tire pressure, and wipers). You\'ll need some basic tools.\n*   **Professional:** A mechanic can perform a more thorough inspection and has the equipment to diagnose more complex issues.\n\n**Frequency:**\n\n*   Most manufacturers recommend a routine checkup every 6 months or 6,000 miles, or as specified in your owner\'s manual.\n\nOnce you provide me with some more information, I can give you a more tailored and helpful response!', '2025-10-11 15:08:52'),
 (21, 2, 'user', 'Make: Toyota, Year: 2023: model: Highlander', '2025-10-11 15:09:32'),
 (22, 2, 'assistant', 'Okay, you\'re providing information about a vehicle. Here\'s that information in a more structured way:\n\n*   **Make:** Toyota\n*   **Year:** 2023\n*   **Model:** Highlander\n\nIs there anything else you\'d like to know or any other way I can help you with this information? Perhaps you want to know about:\n\n*   **Common issues with the 2023 Highlander?**\n*   **Fuel economy?**\n*   **Trim levels?**\n*   **Reviews?**\n*   **Pricing?**\n*   **Competitors?**\n', '2025-10-11 15:09:33');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notifications`
+--
+
+CREATE TABLE `notifications` (
+  `notification_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `title` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `notification_status` enum('Read','Unread') NOT NULL DEFAULT 'Unread',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `notifications`
+--
+
+INSERT INTO `notifications` (`notification_id`, `user_id`, `title`, `message`, `notification_status`, `created_at`) VALUES
+(1, 2, 'Profile Update', 'User Profile Updated successfully', 'Unread', '2025-10-16 15:41:44'),
+(2, 2, 'Password Update', 'Password updated successfully', 'Unread', '2025-10-16 15:45:30'),
+(3, 2, 'Vehicle Profiling', 'Your vehicle has been profiled successfully', 'Unread', '2025-10-16 15:49:10'),
+(4, 2, 'Vehicle Profile Update', 'Your vehicle profile has been updated successfully', 'Unread', '2025-10-16 15:50:28'),
+(5, 2, 'Vehicle Delete', 'Your Toyota Hilux 2021 model profile has been deleted successfully', 'Unread', '2025-10-16 15:54:45'),
+(6, 2, 'Alerts & Reminders', 'A Fuel Guage Maintenance alert (reminder) email has been sent to udoigweuchechukwu@gmail.com regarding your null null null model', 'Unread', '2025-10-16 16:09:02'),
+(7, 2, 'Alerts & Reminders', 'A Fuel Guage Maintenance alert (reminder) email has been sent to udoigweuchechukwu@gmail.com regarding your null null null model', 'Unread', '2025-10-16 16:10:02'),
+(8, 2, 'Alert & Reminder Status Update', 'Fuel Guage Maintenance scheduled reminder for your null null null has been updated successfully', 'Unread', '2025-10-16 16:17:42'),
+(9, 2, 'Alert & Reminder Status Update', 'Fuel Guage Maintenance scheduled reminder for your null null null has been updated successfully', 'Unread', '2025-10-16 16:17:58');
 
 -- --------------------------------------------------------
 
@@ -119,7 +184,16 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `gender`, `phone`, `email`, `password`, `address`, `account_status`, `otp`, `salt`, `role`, `created_at`) VALUES
-(2, 'Uchechukwu', 'Udo', 'Male', '08065198300', 'udoigweuchechukwu@gmail.com', 'Scott1379..', 'FCT,  Nigeria', 'Active', NULL, NULL, 'Car Owner', '2025-10-01 11:18:56');
+(2, 'Uchechukwu', 'Udo', 'Male', '08065198300', 'udoigweuchechukwu@gmail.com', 'Scott1379..', 'FCT,  Nigeria.', 'Active', NULL, NULL, 'Car Owner', '2025-10-01 11:18:56');
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `alerts_and_reminders_view`
+--
+DROP TABLE IF EXISTS `alerts_and_reminders_view`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `alerts_and_reminders_view`  AS SELECT `a`.`reminder_id` AS `reminder_id`, `a`.`user_id` AS `user_id`, `a`.`car_id` AS `car_id`, `a`.`reminder` AS `reminder`, `a`.`interval_in_minutes` AS `interval_in_minutes`, `a`.`last_reminded_on` AS `last_reminded_on`, `a`.`reminder_status` AS `reminder_status`, `a`.`created_at` AS `created_at`, `b`.`first_name` AS `first_name`, `b`.`last_name` AS `last_name`, `b`.`email` AS `email`, `c`.`car_make` AS `car_make`, `c`.`car_model` AS `car_model`, `c`.`car_year` AS `car_year`, `c`.`car_milage` AS `car_milage` FROM ((`alerts_and_reminders` `a` left join `users` `b` on(`a`.`user_id` = `b`.`user_id`)) left join `cars` `c` on(`a`.`car_id` = `c`.`car_id`)) ;
 
 --
 -- Indexes for dumped tables
@@ -148,6 +222,13 @@ ALTER TABLE `knowledge_hub_chats`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indexes for table `notifications`
+--
+ALTER TABLE `notifications`
+  ADD PRIMARY KEY (`notification_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -161,13 +242,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `alerts_and_reminders`
 --
 ALTER TABLE `alerts_and_reminders`
-  MODIFY `reminder_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `reminder_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `knowledge_hub_chats`
@@ -176,10 +257,45 @@ ALTER TABLE `knowledge_hub_chats`
   MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
+-- AUTO_INCREMENT for table `notifications`
+--
+ALTER TABLE `notifications`
+  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `alerts_and_reminders`
+--
+ALTER TABLE `alerts_and_reminders`
+  ADD CONSTRAINT `alerts_and_reminders_ibfk_1` FOREIGN KEY (`car_id`) REFERENCES `cars` (`car_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `alerts_and_reminders_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `cars`
+--
+ALTER TABLE `cars`
+  ADD CONSTRAINT `cars_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `knowledge_hub_chats`
+--
+ALTER TABLE `knowledge_hub_chats`
+  ADD CONSTRAINT `knowledge_hub_chats_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `notifications`
+--
+ALTER TABLE `notifications`
+  ADD CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
