@@ -250,3 +250,127 @@ function startTipRotation() {
     // 5 minutes = 60000 ms
     setInterval(popUpSmartDrivingTip, 300000);
 }
+
+function loadUnreadMessages() {
+    var token = sessionStorage.getItem("token");
+
+    blockUI();
+
+    if (token) {
+        $.ajax({
+            type: "GET",
+            url: `${API_URL_ROOT}/notifications?notification_status=Unread`,
+            dataType: "json",
+            contentType: "application/json",
+            headers: { "x-access-token": token },
+            success: function (response) {
+                unblockUI();
+
+                const notifications = response.data;
+                let html = "";
+
+                if (notifications.length > 0) {
+                    $(".notification-indicator").html(`
+                        <span
+                            class="absolute top-0.5 right-0 z-1 h-2 w-2 rounded-full bg-orange-400 flex"
+                        >
+                            <span
+                                class="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75"
+                            ></span>
+                        </span>    
+                    `);
+                } else {
+                    $(".notification-indicator").html("");
+                }
+
+                for (let i = 0; i < notifications.length; i++) {
+                    const notification = notifications[i];
+
+                    html += `
+                        <li @click="loadNotification(${
+                            notification.notification_id
+                        })">
+                            <a
+                                class="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5"
+                                href="#"
+                            >
+                                <span
+                                    class="relative z-1 block h-10 w-full max-w-10 rounded-full"
+                                >
+                                    <img
+                                        src="/assets/src/images/error/success.svg"
+                                        alt="success-icon"
+                                        class="overflow-hidden rounded-full"
+                                    />
+                                </span>
+
+                                <span class="block">
+                                    <span class="text-theme-sm mb-1.5 block text-gray-500 dark:text-gray-400">
+                                        <span class="font-medium text-gray-800 dark:text-white/90">${
+                                            notification.title
+                                        }</span>
+                                    </span>
+
+                                    <span class="text-theme-xs flex items-center gap-2 text-gray-500 dark:text-gray-400">
+                                        <span>Unread</span>
+                                        <span class="h-1 w-1 rounded-full bg-gray-400"></span>
+                                        <span>${moment(
+                                            notification.created_at
+                                        ).fromNow()}</span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    `;
+                }
+                $(".unread-messages").html(html);
+            },
+            error: function (req, status, err) {
+                showSimpleMessage("Attention", req.statusText, "error");
+                unblockUI();
+            },
+        });
+    }
+}
+
+function loadNotification(notificationID) {
+    var token = sessionStorage.getItem("token");
+
+    blockUI();
+
+    if (token) {
+        $.ajax({
+            type: "GET",
+            url: `${API_URL_ROOT}/notifications/${notificationID}`,
+            dataType: "json",
+            contentType: "application/json",
+            headers: { "x-access-token": token },
+            success: function (response) {
+                unblockUI();
+
+                const notification = response.notification;
+                const createdAt = moment(notification?.created_at).isValid()
+                    ? moment(notification?.created_at).format(
+                          "Do MMMM, YYYY hh:mm:ss A"
+                      )
+                    : "-";
+                const formattedMessage = `${notification.message}<br><br><small>Received at: ${createdAt}</small>`;
+                showSimpleHTMLMessage(
+                    notification.title,
+                    formattedMessage,
+                    "success"
+                );
+
+                loadUnreadMessages();
+            },
+            error: function (req, status, err) {
+                unblockUI();
+                showSimpleMessage(
+                    "Attention",
+                    req.responseJSON.message,
+                    "error"
+                );
+            },
+        });
+    }
+}
