@@ -10,7 +10,10 @@ module.exports = {
         let query = `
             SELECT *
             FROM alerts_and_reminders_view
-            WHERE CURRENT_TIMESTAMP > COALESCE(last_reminded_on, created_at)
+            WHERE CURRENT_TIMESTAMP > COALESCE(
+                DATE_ADD(last_reminded_on, INTERVAL interval_in_minutes MINUTE),
+                DATE_ADD(created_at, INTERVAL interval_in_minutes MINUTE)
+            )
             AND reminder_status = 'Active'
         `;
 
@@ -36,6 +39,16 @@ module.exports = {
                         reminder.email,
                         reminder.reminder,
                         emailTemplate
+                    );
+
+                    //update reminder
+                    await connection.execute(
+                        `
+                        UPDATE alerts_and_reminders
+                        SET last_reminded_on = CURRENT_TIMESTAMP  
+                        WHERE reminder_id = ?
+                    `,
+                        [reminder.reminder_id]
                     );
 
                     //notify user on this alert

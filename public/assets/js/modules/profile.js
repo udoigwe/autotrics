@@ -81,6 +81,7 @@ $(function () {
                     success: function (response) {
                         var token = response.token; //generated access token from request
 
+                        loadUnreadMessages();
                         sessionStorage.removeItem("token"); //remove current access token
                         sessionStorage.setItem("token", token); //set current access token
                         window.location.reload(); //reload current page to review changes in profile
@@ -158,6 +159,7 @@ $(function () {
                             response.message,
                             "success"
                         );
+                        loadUnreadMessages();
                     },
                     error: function (req, status, error) {
                         unblockUI();

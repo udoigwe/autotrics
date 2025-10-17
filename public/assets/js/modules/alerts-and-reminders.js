@@ -369,6 +369,7 @@ $(function () {
                         $("#default-reminder-wrapper").slideUp();
                         $("#custom-reminder-wrapper").slideUp();
                         loadReminders();
+                        loadUnreadMessages();
                     },
                     error: function (req, status, error) {
                         unblockUI();
@@ -436,6 +437,7 @@ $(function () {
                         );
                         $(".modal-close-btn").click();
                         loadReminders();
+                        loadUnreadMessages();
                     },
                     error: function (req, status, error) {
                         unblockUI();
@@ -482,6 +484,7 @@ $(function () {
                             "success"
                         );
                         loadReminders();
+                        loadUnreadMessages();
                     },
                     error: function (req, status, error) {
                         unblockUI();

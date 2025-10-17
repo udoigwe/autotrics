@@ -244,6 +244,7 @@ $(function () {
                             );
                             form.get(0).reset();
                             loadCars();
+                            loadUnreadMessages();
                         } else {
                             unblockUI();
                             showSimpleMessage(
@@ -319,6 +320,7 @@ $(function () {
                         );
                         $(".modal-close-btn").click();
                         loadCars();
+                        loadUnreadMessages();
                     },
                     error: function (req, status, error) {
                         unblockUI();
@@ -365,6 +367,7 @@ $(function () {
                             "success"
                         );
                         loadCars();
+                        loadUnreadMessages();
                     },
                     error: function (req, status, error) {
                         unblockUI();

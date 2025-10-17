@@ -3,6 +3,7 @@ const authValidations = require("../validations/auth.validation");
 const carValidations = require("../validations/car.validation");
 const chatValidations = require("../validations/chat.validation");
 const reminderValidations = require("../validations/reminder.validation");
+const notificationValidations = require("../validations/notification.validation");
 
 module.exports = {
     /* Auth route validators */
@@ -30,4 +31,7 @@ module.exports = {
 
     /* Chat route validators */
     createChat: validate(chatValidations.createChat),
+
+    /* Notification route validators */
+    getNotification: validate(notificationValidations.getNotification),
 };

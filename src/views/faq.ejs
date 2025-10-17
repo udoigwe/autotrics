@@ -5,7 +5,7 @@
         <%- include('./partials/head') %>
     </head>
     <body
-        onload="isAuthenticated(); displayProfile(); startTipRotation()"
+        onload="isAuthenticated(); displayProfile(); startTipRotation(); loadUnreadMessages();"
         x-data="{ page: 'faq', 'loaded': true, 'darkMode': false, 'stickyMenu': false, 'sidebarToggle': false, 'scrollTop': false }"
         x-init="
          darkMode = JSON.parse(localStorage.getItem('darkMode'));
