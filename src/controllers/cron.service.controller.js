@@ -66,7 +66,8 @@ module.exports = {
 
             //console.log("Sent scheduled reminders");
         } catch (e) {
-            next(e);
+            //next(e);
+            console.log("An error occured", e.message);
         } finally {
             connection ? connection.release() : null;
         }
