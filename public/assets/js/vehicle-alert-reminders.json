@@ -1,0 +1,152 @@
+[
+  {
+	"id": 1,
+	"category": "Scheduled Maintenance",
+	"alert": "Engine oil change due"
+  },
+  {
+	"id": 2,
+	"category": "Scheduled Maintenance",
+	"alert": "Oil filter replacement due"
+  },
+  {
+	"id": 3,
+	"category": "Scheduled Maintenance",
+	"alert": "Air filter replacement due"
+  },
+  {
+	"id": 4,
+	"category": "Scheduled Maintenance",
+	"alert": "Fuel filter replacement due"
+  },
+  {
+	"id": 5,
+	"category": "Scheduled Maintenance",
+	"alert": "Tire rotation due"
+  },
+  {
+	"id": 6,
+	"category": "Scheduled Maintenance",
+	"alert": "Brake pads inspection due"
+  },
+  {
+	"id": 7,
+	"category": "Scheduled Maintenance",
+	"alert": "Brake fluid replacement due"
+  },
+  {
+	"id": 8,
+	"category": "Scheduled Maintenance",
+	"alert": "Transmission fluid check due"
+  },
+  {
+	"id": 9,
+	"category": "Scheduled Maintenance",
+	"alert": "Coolant level check due"
+  },
+  {
+	"id": 10,
+	"category": "Scheduled Maintenance",
+	"alert": "Spark plug replacement due"
+  },
+  {
+	"id": 11,
+	"category": "Scheduled Maintenance",
+	"alert": "Battery inspection due"
+  },
+  {
+	"id": 12,
+	"category": "Scheduled Maintenance",
+	"alert": "Wheel alignment check due"
+  },
+  {
+	"id": 13,
+	"category": "Scheduled Maintenance",
+	"alert": "AC system inspection due"
+  },
+  {
+	"id": 14,
+	"category": "Scheduled Maintenance",
+	"alert": "Timing belt replacement due"
+  },
+  {
+	"id": 15,
+	"category": "Scheduled Maintenance",
+	"alert": "Suspension inspection due"
+  },
+  {
+	"id": 16,
+	"category": "Scheduled Maintenance",
+	"alert": "Power steering fluid check due"
+  },
+  {
+	"id": 17,
+	"category": "Scheduled Maintenance",
+	"alert": "Exhaust system inspection due"
+  },
+  {
+	"id": 18,
+	"category": "Scheduled Maintenance",
+	"alert": "Headlight and taillight check due"
+  },
+  {
+	"id": 19,
+	"category": "Scheduled Maintenance",
+	"alert": "Windshield wiper replacement due"
+  },
+  {
+	"id": 20,
+	"category": "Scheduled Maintenance",
+	"alert": "General vehicle inspection due"
+  },
+  {
+	"id": 21,
+	"category": "Registration & Insurance Renewals",
+	"alert": "Vehicle registration renewal due"
+  },
+  {
+	"id": 22,
+	"category": "Registration & Insurance Renewals",
+	"alert": "Vehicle insurance renewal due"
+  },
+  {
+	"id": 23,
+	"category": "Registration & Insurance Renewals",
+	"alert": "Roadworthiness certificate renewal due"
+  },
+  {
+	"id": 24,
+	"category": "Registration & Insurance Renewals",
+	"alert": "Driver's license renewal due"
+  },
+  {
+	"id": 25,
+	"category": "Registration & Insurance Renewals",
+	"alert": "Emission test renewal due"
+  },
+  {
+	"id": 26,
+	"category": "Registration & Insurance Renewals",
+	"alert": "Vehicle inspection renewal due"
+  },
+  {
+	"id": 27,
+	"category": "Registration & Insurance Renewals",
+	"alert": "Road tax renewal due"
+  },
+  {
+	"id": 28,
+	"category": "Registration & Insurance Renewals",
+	"alert": "Comprehensive insurance policy renewal due"
+  },
+  {
+	"id": 29,
+	"category": "Registration & Insurance Renewals",
+	"alert": "Third-party insurance policy renewal due"
+  },
+  {
+	"id": 30,
+	"category": "Registration & Insurance Renewals",
+	"alert": "Fleet permit renewal due"
+  }
+]
