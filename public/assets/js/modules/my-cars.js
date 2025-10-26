@@ -2,8 +2,9 @@ $(function () {
     let token = sessionStorage.getItem("token");
 
     $(document).ready(function ($) {
-        //dataTableAlertPrevent("table");
         loadCars();
+        loadCarModels("add-car-form");
+        loadCarModels("car-update-form");
 
         //add product brands
         $("#add-car-form").on("submit", function (e) {
@@ -37,6 +38,10 @@ $(function () {
                 headers: { "x-access-token": token },
                 success: function (response) {
                     const cars = response.data;
+                    editModal.find("#car_model").html(`
+                        <option value="" class="text-gray-700 dark:bg-gray-900 dark:text-gray-400">Select Car Model</option>
+                        <option value="${cars[0].car_model}" class="text-gray-700 dark:bg-gray-900 dark:text-gray-400">${cars[0].car_model}</option>
+                    `);
                     editModal.find("#car_make").val(cars[0].car_make);
                     editModal.find("#car_model").val(cars[0].car_model);
                     editModal.find("#car_milage").val(cars[0].car_milage);
@@ -380,6 +385,63 @@ $(function () {
                 });
             } else {
                 showSimpleMessage("Canceled", "Process Abborted", "error");
+            }
+        });
+    }
+
+    //internal and dynamic function to switch car models
+    function loadCarModels(form) {
+        $(`#${form}`).on("change", ".car-make", function () {
+            var Form = $(`#${form}`);
+            var carMake = $(this).val();
+            var carModelSelect = Form.find(".car-model");
+            var carModelsHTML = `<option value="" class="text-gray-700 dark:bg-gray-900 dark:text-gray-400">Select Car Model</option>`;
+
+            blockUI();
+
+            if (carMake) {
+                $.ajax({
+                    type: "GET",
+                    url: "/assets/js/cars.json",
+                    dataType: "json",
+                    success: function (data) {
+                        const cars = data.filter(
+                            (car) => car.car_make === carMake
+                        );
+
+                        for (let i = 0; i < cars.length; i++) {
+                            const car = cars[i];
+
+                            carModelsHTML += `
+                                <option
+                                    value="${car.model}"
+                                    class="text-gray-700 dark:bg-gray-900 dark:text-gray-400"
+                                >
+                                    ${car.model}
+                                </option>
+                            `;
+                        }
+
+                        carModelSelect.html(carModelsHTML);
+                        unblockUI();
+                    },
+                    error: function (req, status, error) {
+                        unblockUI();
+                        showSimpleMessage(
+                            "Attention",
+                            "Failed to load cars",
+                            "error"
+                        );
+                        carModelSelect.html(`
+                            <option value="" class="text-gray-700 dark:bg-gray-900 dark:text-gray-400">Select Car Model</option>
+                        `);
+                    },
+                });
+            } else {
+                carModelSelect.html(`
+                    <option value="" class="text-gray-700 dark:bg-gray-900 dark:text-gray-400">Select Car Model</option>
+                `);
+                unblockUI();
             }
         });
     }
