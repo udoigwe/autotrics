@@ -225,7 +225,7 @@ function popUpSmartDrivingTip() {
             const randomIndex = Math.floor(Math.random() * tips.length);
             const tip = tips[randomIndex];
             const tipMessage = tip.message;
-            const nextTime = new Date(Date.now() + 5 * 60 * 1000); //every 5 minutes
+            const nextTime = new Date(Date.now() + 3 * 60 * 1000); //every 3 minutes
             const nextTipTimeFormatted = nextTime.toLocaleTimeString();
             const tipMessageWithNextTime = `${tip.message}<br><br><small>Next tip at: ${nextTipTimeFormatted}</small>`;
 
@@ -247,8 +247,9 @@ function popUpSmartDrivingTip() {
 function startTipRotation() {
     // 10 minutes = 600,000 ms
     // 1 minute = 60000 ms
-    // 5 minutes = 60000 ms
-    setInterval(popUpSmartDrivingTip, 300000);
+    // 5 minutes = 300,000 ms
+    // 3 minutes = 180,000 ms
+    setInterval(popUpSmartDrivingTip, 180000);
 }
 
 function loadUnreadMessages() {
@@ -373,4 +374,9 @@ function loadNotification(notificationID) {
             },
         });
     }
+}
+
+function truncateText(text, limit = 131) {
+    if (!text) return "";
+    return text.length > limit ? text.slice(0, limit) + "..." : text;
 }
