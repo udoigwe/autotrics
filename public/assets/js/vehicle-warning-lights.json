@@ -1,0 +1,140 @@
+[
+	{
+		"id": 1,
+		"title": "Oil Pressure Warning",
+		"description": "If this light stays lit it indicates loss of oil pressure. Immediately check oil level and pressure.",
+		"image_url": "/assets/src/images/warning-lights/Oil_Pressure_Warning.jpeg"
+	},
+	{
+		"id": 2,
+		"title": "Coolant Temperature Warning",
+		"description": "Indicates temperature has exceeded normal limits. Check coolant level, fan operation, radiator cap, coolant leaks.",
+		"image_url": "/assets/src/images/warning-lights/Coolant_Temp_Warning.jpeg"
+	},
+	{
+		"id": 3,
+		"title": "Battery/Charging Alert",
+		"description": "Indicates voltage level is below normal level t and the vehicle’s charging system is not functioning properly. Check battery terminals, alternator belt, and battery condition.",
+		"image_url": "/assets/src/images/warning-lights/Battery_Alert.jpeg"
+	},
+	{
+		"id": 4,
+		"title": "ABS Light",
+		"description": "Indicates that the Anti-lock Brake computer has set a code and needs professional diagnosis.",
+		"image_url": "/assets/src/images/warning-lights/ABS_Light.jpeg"
+	},
+	{
+		"id": 5,
+		"title": "Airbag Fault",
+		"description": "If this light stays illuminated after starting it indicates that the vehicle has found a fault in the airbag system and the computer has set a code. Professional repair of the supplemental restraint system is highly recommended.",
+		"image_url": "/assets/src/images/warning-lights/Airbag_Fault.jpeg"
+	},
+	{
+		"id": 6,
+		"title": "Brake System",
+		"description": "Indicates one of three possible conditions: parking brake is on; problem with the braking system/brake fluid is low, or ABS problem. Check brake fluid and make sure the parking brake is fully released. If the problem is in the ABS system, it may need a professional diagnosis.",
+		"image_url": "/assets/src/images/warning-lights/Brake_System.webp"
+	},
+	{
+		"id": 7,
+		"title": "Cruise Control",
+		"description": "Indicates that cruise control is set during driving.",
+		"image_url": "/assets/src/images/warning-lights/Cruise_Control.png"
+	},
+	{
+		"id": 8,
+		"title": "DEF Light (Diesel)",
+		"description": "The diesel exhaust fluid reservoir is low on fluid.",
+		"image_url": "/assets/src/images/warning-lights/DEF_Light.jpg"
+	},
+	{
+		"id": 9,
+		"title": "Door Ajar",
+		"description": "Indicates that a door (including hood and trunk) is not closed. Open and close all doors, including hood and trunk. If vehicle is left in this condition overnight it can drain the battery.",
+		"image_url": "/assets/src/images/warning-lights/Door_Ajar.jpeg"
+	},
+	{
+		"id": 10,
+		"title": "DPF Light (Diesel)",
+		"description": "The diesel exhaust particulate filter has failed its test and needs to be serviced.",
+		"image_url": "/assets/src/images/warning-lights/DPF_Light.png"
+	},
+	{
+		"id": 11,
+		"title": "ESP Fault",
+		"description": "Indicates that there is a problem with the vehicle’s traction control/anti-skid or electronic stability system.",
+		"image_url": "/assets/src/images/warning-lights/ESP_Fault.png"
+	},
+	{
+		"id": 12,
+		"title": "Fog Lamp",
+		"description": "Indicates that the vehicle’s front fog lamps are illuminated.",
+		"image_url": "/assets/src/images/warning-lights/Fog_Lamp.jpg"
+	},
+	{
+		"id": 13,
+		"title": "Gas Cap",
+		"description": "The check gas cap light indicates that the gas cap is not tightened properly. If not addressed, quite often the Check Engine Light will also illuminate.",
+		"image_url": "/assets/src/images/warning-lights/Gas_Cap.jpeg"
+	},
+	{
+		"id": 14,
+		"title": "Glow Plug (Diesel)",
+		"description": "On diesel vehicles this light indicates that the engine’s glow plugs are warming up and the engine should not be started until this light goes out.",
+		"image_url": "/assets/src/images/warning-lights/Glow_Plug.jpg"
+	},
+	{
+		"id": 15,
+		"title": "Oil Change Reminder",
+		"description": "Indicates that oil life has expired. This is monitored by the ECM; the interval can be mileage or a combination of readings taken by the ECM. The reset procedure is listed in the owner’s manual. Some vehicles require the use of special tools to reset the light.",
+		"image_url": "/assets/src/images/warning-lights/Oil_Change_Reminder.jpeg"
+	},
+	{
+		"id": 16,
+		"title": "Overdrive Light",
+		"description": "This symbol indicates that the vehicle’s overdrive system has been manually turned off. Typically the overdrive system is controlled by an on/off switch.",
+		"image_url": "/assets/src/images/warning-lights/Overdrive_Light.jpeg"
+	},
+	{
+		"id": 17,
+		"title": "Reduced Power Warning",
+		"description": "Indicates Engine Computer has limited engine power output. The ECM has many levels of reduced power depending on what component has failed in its control system. Usually requires diagnosis with a professional scan tool.",
+		"image_url": "/assets/src/images/warning-lights/Reduced_Power_Warning.png"
+	},
+	{
+		"id": 18,
+		"title": "Security Alert",
+		"description": "If the symbol lights momentarily it may mean that the ignition switch is locked and will need the proper transponder-equipped key to re-start. If the symbol is visible when the vehicle is on, then it typically indicates a malfunction in the security system.",
+		"image_url": "/assets/src/images/warning-lights/Security_Alert.jpeg"
+	},
+	{
+		"id": 19,
+		"title": "Service Vehicle Soon",
+		"description": "Typically indicates a lighting or other electrical problem that is controlled by the BCM (body control module). Check all lights, head lights, turn signals, brake lights, and hazard lights. This symbol may also be used to warn driver of a traction control problem, or a communication problem between modules.",
+		"image_url": "/assets/src/images/warning-lights/Service_Vehicle_Soon.png"
+	},
+	{
+		"id": 20,
+		"title": "TPMS (Tire Pressure Monitoring System)",
+		"description": "Indicates the tire pressure monitoring system has found a tire with low air pressure or there may be a sensor malfunction. Check tire pressure. Some vehicles will allow manual reset of TPMS warning light and others will require professional diagnosis. Refer to owner’s manual.",
+		"image_url": "/assets/src/images/warning-lights/Tire_Pressure_Monitoring_System.jpeg"
+	},
+	{
+		"id": 21,
+		"title": "Traction Control or ESP",
+		"description": "Illuminates when the vehicle’s traction control/antiskid or electronic stability system is in use. Usually an indicator that conditions are slippery.",
+		"image_url": "/assets/src/images/warning-lights/Traction_Control.png"
+	},
+	{
+		"id": 22,
+		"title": "Transmission Temperature",
+		"description": "Transmission is operating at higher than optimum temperature as transmission fluid is hotter than normal. Check transmission fluid level and engine coolant level.",
+		"image_url": "/assets/src/images/warning-lights/Transmission_Temperature.png"
+	},
+	{
+		"id": 23,
+		"title": "Washer Fluid Reminder",
+		"description": "Indicates washer fluid is low. Fill washer fluid reservoir. The cap has a symbol that looks like a windshield. Some vehicles have separate reservoirs for front and rear window washers.",
+		"image_url": "/assets/src/images/warning-lights/Washer_Fluid_Reminder.png"
+	}
+]
