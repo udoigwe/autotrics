@@ -63,4 +63,9 @@ module.exports = {
             title: "Alerts & Reminders | Autotrics",
         });
     },
+    dashboardWarningLights: async (req, res) => {
+        res.render("dashboard-warning-lights", {
+            title: "Dashboard Warning Lights | Autotrics",
+        });
+    },
 };
