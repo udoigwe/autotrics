@@ -34,7 +34,7 @@ const carRoutes = require("./src/routes/car");
 const chatRoutes = require("./src/routes/chat");
 const reminderRoutes = require("./src/routes/reminder");
 const notificationRoutes = require("./src/routes/notification");
-/*const postRoutes = require("./src/routes/post"); */
+const dashboardRoutes = require("./src/routes/dashboard");
 const errorHandler = require("./src/middleware/errorHandler");
 
 //importing all view routes
@@ -55,6 +55,7 @@ app.use(process.env.ROUTE_PREFIX, carRoutes);
 app.use(process.env.ROUTE_PREFIX, chatRoutes);
 app.use(process.env.ROUTE_PREFIX, reminderRoutes);
 app.use(process.env.ROUTE_PREFIX, notificationRoutes);
+app.use(process.env.ROUTE_PREFIX, dashboardRoutes);
 
 //using imported view routes
 app.use(viewRoutes);
