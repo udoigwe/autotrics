@@ -4,37 +4,48 @@ $(function () {
     $(document).ready(function ($) {
         loadCarDropDown();
         loadReminders();
+        loadReminderOptions("add-reminder-form");
 
         //
         $("#reminder-type").change(function () {
             var selectedOption = $(this).val();
 
             if (selectedOption === "Default") {
+                $("#default-reminder-category-wrapper").slideDown();
                 $("#default-reminder-wrapper").slideDown();
                 $("#custom-reminder-wrapper").slideUp();
                 $("#default-reminder").prop("required", true);
+                $("#default-reminder-category").prop("required", true);
                 $("#custom-reminder").prop("required", false).val("");
                 $("#default-reminder").addClass("required");
+                $("#default-reminder-category").addClass("required");
                 $("#custom-reminder").removeClass("required");
                 $("#default-reminder").attr("name", "reminder");
                 $("#custom-reminder").removeAttr("name");
             } else if (selectedOption === "Custom") {
                 $("#custom-reminder-wrapper").slideDown();
                 $("#default-reminder-wrapper").slideUp();
+                $("#default-reminder-category-wrapper").slideUp();
                 $("#custom-reminder").prop("required", true);
                 $("#default-reminder").prop("required", false).val("");
+                $("#default-reminder-category").prop("required", false).val("");
                 $("#custom-reminder").addClass("required");
                 $("#default-reminder").removeClass("required");
+                $("#default-reminder-category").removeClass("required");
                 $("#custom-reminder").attr("name", "reminder");
                 $("#default-reminder").removeAttr("name");
             } else {
                 $(
-                    "#default-reminder-wrapper, #custom-reminder-wrapper"
+                    "#default-reminder-wrapper, #default-reminder-category-wrapper, #custom-reminder-wrapper"
                 ).slideUp();
-                $("#default-reminder, #custom-reminder")
+                $(
+                    "#default-reminder, #default-reminder-category-wrapper, #custom-reminder"
+                )
                     .prop("required", false)
                     .val("");
-                $("#default-reminder, #custom-reminder").addClass("required");
+                $(
+                    "#default-reminder, #default-reminder-category-wrapper, #custom-reminder"
+                ).addClass("required");
                 $("#default-reminder, #custom-reminder").attr(
                     "name",
                     "reminder"
@@ -367,6 +378,7 @@ $(function () {
                         );
                         form.get(0).reset();
                         $("#default-reminder-wrapper").slideUp();
+                        $("#default-reminder-category-wrapper").slideUp();
                         $("#custom-reminder-wrapper").slideUp();
                         loadReminders();
                         loadUnreadMessages();
@@ -497,6 +509,63 @@ $(function () {
                 });
             } else {
                 showSimpleMessage("Canceled", "Process Abborted", "error");
+            }
+        });
+    }
+
+    //internal and dynamic function to switch reminders
+    function loadReminderOptions(form) {
+        $(`#${form}`).on("change", ".reminder-category", function () {
+            var Form = $(`#${form}`);
+            var reminderCategory = $(this).val();
+            var reminderSelect = Form.find(".default-reminder");
+            var remindersHTML = `<option value="" class="text-gray-700 dark:bg-gray-900 dark:text-gray-400">Select A Reminder</option>`;
+
+            blockUI();
+
+            if (reminderCategory) {
+                $.ajax({
+                    type: "GET",
+                    url: "/assets/js/vehicle-alert-reminders.json",
+                    dataType: "json",
+                    success: function (data) {
+                        const reminders = data.filter(
+                            (reminder) => reminder.category === reminderCategory
+                        );
+
+                        for (let i = 0; i < reminders.length; i++) {
+                            const reminder = reminders[i];
+
+                            remindersHTML += `
+                                <option
+                                    value="${reminder.alert}"
+                                    class="text-gray-700 dark:bg-gray-900 dark:text-gray-400"
+                                >
+                                    ${reminder.alert}
+                                </option>
+                            `;
+                        }
+
+                        reminderSelect.html(remindersHTML);
+                        unblockUI();
+                    },
+                    error: function (req, status, error) {
+                        unblockUI();
+                        showSimpleMessage(
+                            "Attention",
+                            "Failed to load reminders",
+                            "error"
+                        );
+                        reminderSelect.html(`
+                            <option value="" class="text-gray-700 dark:bg-gray-900 dark:text-gray-400">Select A Reminder</option>
+                        `);
+                    },
+                });
+            } else {
+                reminderSelect.html(`
+                    <option value="" class="text-gray-700 dark:bg-gray-900 dark:text-gray-400">Select A Reminder</option>
+                `);
+                unblockUI();
             }
         });
     }
