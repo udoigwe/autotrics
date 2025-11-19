@@ -9,6 +9,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 9001;
 const cors = require("cors");
+const fileUpload = require("express-fileupload");
 const useragent = require("express-useragent");
 const swaggerUi = require("swagger-ui-express");
 const yaml = require("js-yaml");
@@ -19,6 +20,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(useragent.express());
+app.use(fileUpload({ useTempFiles: false }));
 
 //static files
 app.use(express.static(__dirname + "/public"));
