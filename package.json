@@ -31,6 +31,7 @@
     "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "express-fileupload": "^1.5.2",
     "express-useragent": "^1.0.15",
     "express-validator": "^7.2.1",
     "js-yaml": "^4.1.0",
