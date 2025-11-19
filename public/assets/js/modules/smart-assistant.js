@@ -10,6 +10,23 @@ $(function () {
             e.preventDefault(); //prevent default form submission event
             newChat(); //Internal function for form submission
         });
+
+        //trigger input file
+        $("#attachBtn").on("click", function (e) {
+            e.preventDefault();
+            $("#fileInput").click();
+        });
+
+        $("#fileInput").on("change", function () {
+            const input = $(this)[0];
+            console.log(input);
+
+            if (input.files && input.files.length > 0) {
+                $("#attachText").text("File Attached");
+            } else {
+                $("#attachText").text("Attach");
+            }
+        });
     });
 
     //internall function to load all user chats with AI
@@ -39,6 +56,12 @@ $(function () {
                             .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // bold
                             .replace(/\*(.*?)\*/g, "<em>$1</em>"); // italics
                         HTMLChat += `
+                            <!-- Chat image if any -->
+                            ${
+                                chat.image_url
+                                    ? `<img src="/assets/src/images/uploads/${chat.image_url}" class="mb-2 rounded-lg max-w-[200px] border" />`
+                                    : ""
+                            }
                             <!-- User Message -->
                             <div class="flex justify-end">
                                 <div class="shadow-theme-xs bg-brand-100 dark:bg-brand-500/20 max-w-[480px] rounded-xl rounded-tr-xs px-4 py-3">
@@ -99,16 +122,24 @@ $(function () {
                 $("#" + fields[i].id).focus();
                 showSimpleMessage(
                     "Attention",
-                    `${fields[i].name} is required`,
+                    `${fields[i].name} is requiredd`,
                     "error"
                 );
                 return false;
             }
         }
 
+        const imageFile = form.find("#fileInput")[0].files[0];
+        let imagePreviewUrl = imageFile ? URL.createObjectURL(imageFile) : null;
+
         const formattedText = marked.parse(message.replace(/\\n/g, "\n"));
         // Create a temporary message element
         const userMessage = $(`
+            ${
+                imagePreviewUrl
+                    ? `<img src="${imagePreviewUrl}" class="mb-2 rounded-lg max-w-[200px] border" />`
+                    : ""
+            }
             <div class="flex justify-end">
                 <div>
                     <div class="shadow-theme-xs bg-brand-100 dark:bg-brand-500/20 max-w-[480px] rounded-xl rounded-tr-xs px-4 py-3">
@@ -126,7 +157,52 @@ $(function () {
         chatbox.append(userMessage);
         chatbox.animate({ scrollTop: chatbox[0].scrollHeight }, 500);
 
+        const fd = new FormData(form[0]);
+        fd.append("message", message);
+
         $.ajax({
+            type: "POST",
+            url: `${API_URL_ROOT}/chats`,
+            data: fd,
+            dataType: "json",
+            contentType: false,
+            processData: false,
+            cache: false,
+            headers: { "x-access-token": token },
+            success: function (response) {
+                const reply = response.message;
+                const formattedReply = marked.parse(
+                    reply.replace(/\\n/g, "\n")
+                );
+                chatbox.append(`
+                    <div class="flex justify-start">
+                        <div>
+                            <div class="shadow-theme-xs max-w-[480px] rounded-xl rounded-tl-xs bg-gray-100 px-4 py-3 dark:bg-white/5">
+                                <div class="text-sm leading-5 text-gray-800 dark:text-white/90 prose prose-sm dark:prose-invert max-w-none">
+                                    ${formattedReply}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `);
+                chatbox.animate({ scrollTop: chatbox[0].scrollHeight }, 500);
+                unblockUI();
+            },
+            error: function (req, status, error) {
+                // ❌ Remove the message on failure
+                userMessage.remove();
+                chatbox.animate({ scrollTop: chatbox[0].scrollHeight }, 500);
+
+                unblockUI();
+                showSimpleMessage(
+                    "Attention",
+                    req.responseJSON.message,
+                    "error"
+                );
+            },
+        });
+
+        /* $.ajax({
             type: "POST",
             url: `${API_URL_ROOT}/chats`,
             data: JSON.stringify({ message }),
@@ -164,6 +240,6 @@ $(function () {
                     "error"
                 );
             },
-        });
+        }); */
     }
 });
