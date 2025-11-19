@@ -1,5 +1,6 @@
 const pool = require("../utils/dbConfig");
 const moment = require("moment");
+const path = require("path");
 const CustomError = require("../utils/CustomError");
 const { GoogleGenAI } = require("@google/genai");
 
@@ -7,6 +8,7 @@ module.exports = {
     createChat: async (req, res, next) => {
         const { user_id } = req.userDecodedData;
         const { message } = req.body;
+        const file = req.files?.image;
 
         let connection;
 
@@ -21,25 +23,67 @@ module.exports = {
             //start db transaction
             await connection.beginTransaction();
 
+            //instantiate image URL
+            let imageUrl = null;
+
+            // Save image file if exists
+            if (file) {
+                const fileName = `${Date.now()}_${file.name}`;
+                const uploadPath = path.join(
+                    __dirname,
+                    "../../public/assets/src/images/uploads",
+                    fileName
+                );
+
+                // write file to disk
+                await file.mv(uploadPath);
+
+                // URL to serve image
+                imageUrl = `${fileName}`;
+            }
+
             //save user message
             await connection.execute(
                 `
                     INSERT INTO knowledge_hub_chats
                     (
                         user_id,
-                        message
+                        message,
+                        image_url
                     )
-                    VALUES (?, ?)
+                    VALUES (?, ?, ?)
                 `,
-                [user_id, message]
+                [user_id, message, imageUrl]
             );
 
-            const response = await ai.models.generateContent({
+            // Convert image to base64 for AI usage only
+            let base64Image = file ? file.data.toString("base64") : null;
+
+            /* const response = await ai.models.generateContent({
                 model: "gemini-2.0-flash",
                 contents: message,
                 generation_config: {
                     max_output_tokens: 50, // roughly controls word count
                 },
+            }); */
+
+            // 4. Send to Gemini
+            const response = await ai.models.generateContent({
+                model: "gemini-2.0-flash",
+                contents: [
+                    {
+                        role: "user",
+                        parts: [
+                            { text: message },
+                            base64Image && {
+                                inlineData: {
+                                    data: base64Image,
+                                    mimeType: file.mimetype,
+                                },
+                            },
+                        ].filter(Boolean),
+                    },
+                ],
             });
 
             //get reply from gemini
