@@ -7,7 +7,7 @@ const { GoogleGenAI } = require("@google/genai");
 module.exports = {
     createChat: async (req, res, next) => {
         const { user_id } = req.userDecodedData;
-        const { message } = req.body;
+        const message = !req.body.message ? null : req.body.message;
         const file = req.files?.image;
 
         let connection;
@@ -74,11 +74,11 @@ module.exports = {
                     {
                         role: "user",
                         parts: [
-                            { text: message },
+                            message && { text: message },
                             base64Image && {
                                 inlineData: {
                                     data: base64Image,
-                                    mimeType: file.mimetype,
+                                    mimeType: file?.mimetype,
                                 },
                             },
                         ].filter(Boolean),
