@@ -8,6 +8,9 @@ $(function () {
         $("#search_term").on("input change", function () {
             filterDashboardWarningLights();
         });
+        $("#car-make").on("change", function () {
+            filterDashboardWarningLights();
+        });
         $(".dahboard-warning-lights").on(
             "click",
             ".read-more-btn",
@@ -129,6 +132,7 @@ $(function () {
     // ✅ Function to filter Dashboard warning lights based on user input
     function filterDashboardWarningLights() {
         const searchTerm = $("#search_term").val().toLowerCase();
+        const carMake = $("#car-make").val().toLowerCase();
 
         blockUI();
 
@@ -138,12 +142,21 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 const filtered = data.filter((warningLight) => {
+                    const title = warningLight.title.toLowerCase();
+                    const desc = warningLight.description.toLowerCase();
+                    const vehicleType = warningLight.vehicle_type.toLowerCase();
+
+                    // 🟦 condition 1: if search input exists → search by title/description
                     const matchesSearch =
-                        warningLight.title.toLowerCase().includes(searchTerm) ||
-                        warningLight.description
-                            .toLowerCase()
-                            .includes(searchTerm);
-                    return matchesSearch;
+                        !searchTerm ||
+                        title.includes(searchTerm) ||
+                        desc.includes(searchTerm);
+
+                    // 🟩 condition 2: if dropdown has value → match vehicle type
+                    const carMakeFilter = !carMake || vehicleType === carMake;
+
+                    // 🟧 return true only if both conditions are satisfied
+                    return matchesSearch && carMakeFilter;
                 });
 
                 displayDashboardWarningLights(filtered);
