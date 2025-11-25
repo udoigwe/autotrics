@@ -51,28 +51,50 @@ $(function () {
 
                     if (chat.sender_role === "user") {
                         //user message
-                        const formatted = chat.message
-                            .replace(/\\n/g, "<br/>") // line breaks
-                            .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // bold
-                            .replace(/\*(.*?)\*/g, "<em>$1</em>"); // italics
+                        const rawMessage = chat?.message ?? "";
+                        const hasMessage = rawMessage.trim() !== "";
+                        const hasImage = Boolean(chat?.image_url);
+
+                        // ⛔ Skip this loop item if there is NO message and NO image
+                        if (!hasMessage && !hasImage) {
+                            continue;
+                        }
+
+                        const formatted = hasMessage
+                            ? rawMessage
+                                  .replace(/\\n/g, "<br/>")
+                                  .replace(
+                                      /\*\*(.*?)\*\*/g,
+                                      "<strong>$1</strong>"
+                                  )
+                                  .replace(/\*(.*?)\*/g, "<em>$1</em>")
+                            : "";
+
                         HTMLChat += `
-                            <!-- Chat image if any -->
-                            ${
-                                chat.image_url
-                                    ? `<img src="/assets/src/images/uploads/${chat.image_url}" class="mb-2 rounded-lg max-w-[200px] border" />`
-                                    : ""
-                            }
-                            <!-- User Message -->
+                            <!-- User Content -->
                             <div class="flex justify-end">
                                 <div class="shadow-theme-xs bg-brand-100 dark:bg-brand-500/20 max-w-[480px] rounded-xl rounded-tr-xs px-4 py-3">
-                                    <p class="text-left text-sm font-normal text-gray-800 dark:text-white/90">${formatted}</p>
+                                    
+                                    ${
+                                        hasImage
+                                            ? `<img src="/assets/src/images/uploads/${chat.image_url}" 
+                                                class="mb-2 rounded-lg max-w-[200px] border" />`
+                                            : ""
+                                    }
+
+                                    ${
+                                        hasMessage
+                                            ? `<p class="text-left text-sm font-normal text-gray-800 dark:text-white/90">${formatted}</p>`
+                                            : ""
+                                    }
+
                                 </div>
                             </div>
                         `;
                     } else {
                         //AI message
-                        const formattedText = marked.parse(
-                            chat.message.replace(/\\n/g, "\n")
+                        const formattedText = marked?.parse(
+                            chat?.message.replace(/\\n/g, "\n")
                         );
                         HTMLChat += `
                             <!-- AI Response -->
@@ -132,20 +154,45 @@ $(function () {
         const imageFile = form.find("#fileInput")[0].files[0];
         let imagePreviewUrl = imageFile ? URL.createObjectURL(imageFile) : null;
 
-        const formattedText = marked.parse(message.replace(/\\n/g, "\n"));
-        // Create a temporary message element
-        const userMessage = $(`
-            ${
-                imagePreviewUrl
-                    ? `<img src="${imagePreviewUrl}" class="mb-2 rounded-lg max-w-[200px] border" />`
-                    : ""
-            }
+        const hasMessage = message.trim() !== "";
+        const hasImage = !!imagePreviewUrl;
+
+        // ⛔ If no message and no image → stop
+        if (!hasMessage && !hasImage) {
+            unblockUI();
+            showSimpleMessage(
+                "Attention",
+                "Type a message or upload an image.",
+                "error"
+            );
+            return false;
+        }
+
+        // Format text only if it exists
+        const formattedText = hasMessage
+            ? marked.parse(message.replace(/\\n/g, "\n"))
+            : "";
+        // Build preview bubble
+        let userMessage = $(`
             <div class="flex justify-end">
                 <div>
                     <div class="shadow-theme-xs bg-brand-100 dark:bg-brand-500/20 max-w-[480px] rounded-xl rounded-tr-xs px-4 py-3">
-                        <div class="text-sm leading-5 text-gray-800 dark:text-white/90 prose prose-sm dark:prose-invert max-w-none">
-                            ${formattedText}
-                        </div>
+                        
+                        ${
+                            hasImage
+                                ? `<img src="${imagePreviewUrl}" class="mb-2 rounded-lg max-w-[200px] border" />`
+                                : ""
+                        }
+
+                        ${
+                            hasMessage
+                                ? `
+                            <div class="text-sm leading-5 text-gray-800 dark:text-white/90 prose prose-sm dark:prose-invert max-w-none">
+                                ${formattedText}
+                            </div>
+                        `
+                                : ""
+                        }
                     </div>
                 </div>
             </div>
