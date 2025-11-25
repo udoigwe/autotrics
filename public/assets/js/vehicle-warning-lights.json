@@ -1,140 +1,394 @@
 [
-	{
-		"id": 1,
-		"title": "Oil Pressure Warning",
-		"description": "If this light stays lit it indicates loss of oil pressure. Immediately check oil level and pressure.",
-		"image_url": "/assets/src/images/warning-lights/Oil_Pressure_Warning.jpeg"
-	},
-	{
-		"id": 2,
-		"title": "Coolant Temperature Warning",
-		"description": "Indicates temperature has exceeded normal limits. Check coolant level, fan operation, radiator cap, coolant leaks.",
-		"image_url": "/assets/src/images/warning-lights/Coolant_Temp_Warning.jpeg"
-	},
-	{
-		"id": 3,
-		"title": "Battery/Charging Alert",
-		"description": "Indicates voltage level is below normal level t and the vehicle’s charging system is not functioning properly. Check battery terminals, alternator belt, and battery condition.",
-		"image_url": "/assets/src/images/warning-lights/Battery_Alert.jpeg"
-	},
-	{
-		"id": 4,
-		"title": "ABS Light",
-		"description": "Indicates that the Anti-lock Brake computer has set a code and needs professional diagnosis.",
-		"image_url": "/assets/src/images/warning-lights/ABS_Light.jpeg"
-	},
-	{
-		"id": 5,
-		"title": "Airbag Fault",
-		"description": "If this light stays illuminated after starting it indicates that the vehicle has found a fault in the airbag system and the computer has set a code. Professional repair of the supplemental restraint system is highly recommended.",
-		"image_url": "/assets/src/images/warning-lights/Airbag_Fault.jpeg"
-	},
-	{
-		"id": 6,
-		"title": "Brake System",
-		"description": "Indicates one of three possible conditions: parking brake is on; problem with the braking system/brake fluid is low, or ABS problem. Check brake fluid and make sure the parking brake is fully released. If the problem is in the ABS system, it may need a professional diagnosis.",
-		"image_url": "/assets/src/images/warning-lights/Brake_System.webp"
-	},
-	{
-		"id": 7,
-		"title": "Cruise Control",
-		"description": "Indicates that cruise control is set during driving.",
-		"image_url": "/assets/src/images/warning-lights/Cruise_Control.png"
-	},
-	{
-		"id": 8,
-		"title": "DEF Light (Diesel)",
-		"description": "The diesel exhaust fluid reservoir is low on fluid.",
-		"image_url": "/assets/src/images/warning-lights/DEF_Light.jpg"
-	},
-	{
-		"id": 9,
-		"title": "Door Ajar",
-		"description": "Indicates that a door (including hood and trunk) is not closed. Open and close all doors, including hood and trunk. If vehicle is left in this condition overnight it can drain the battery.",
-		"image_url": "/assets/src/images/warning-lights/Door_Ajar.jpeg"
-	},
-	{
-		"id": 10,
-		"title": "DPF Light (Diesel)",
-		"description": "The diesel exhaust particulate filter has failed its test and needs to be serviced.",
-		"image_url": "/assets/src/images/warning-lights/DPF_Light.png"
-	},
-	{
-		"id": 11,
-		"title": "ESP Fault",
-		"description": "Indicates that there is a problem with the vehicle’s traction control/anti-skid or electronic stability system.",
-		"image_url": "/assets/src/images/warning-lights/ESP_Fault.png"
-	},
-	{
-		"id": 12,
-		"title": "Fog Lamp",
-		"description": "Indicates that the vehicle’s front fog lamps are illuminated.",
-		"image_url": "/assets/src/images/warning-lights/Fog_Lamp.jpg"
-	},
-	{
-		"id": 13,
-		"title": "Gas Cap",
-		"description": "The check gas cap light indicates that the gas cap is not tightened properly. If not addressed, quite often the Check Engine Light will also illuminate.",
-		"image_url": "/assets/src/images/warning-lights/Gas_Cap.jpeg"
-	},
-	{
-		"id": 14,
-		"title": "Glow Plug (Diesel)",
-		"description": "On diesel vehicles this light indicates that the engine’s glow plugs are warming up and the engine should not be started until this light goes out.",
-		"image_url": "/assets/src/images/warning-lights/Glow_Plug.jpg"
-	},
-	{
-		"id": 15,
-		"title": "Oil Change Reminder",
-		"description": "Indicates that oil life has expired. This is monitored by the ECM; the interval can be mileage or a combination of readings taken by the ECM. The reset procedure is listed in the owner’s manual. Some vehicles require the use of special tools to reset the light.",
-		"image_url": "/assets/src/images/warning-lights/Oil_Change_Reminder.jpeg"
-	},
-	{
-		"id": 16,
-		"title": "Overdrive Light",
-		"description": "This symbol indicates that the vehicle’s overdrive system has been manually turned off. Typically the overdrive system is controlled by an on/off switch.",
-		"image_url": "/assets/src/images/warning-lights/Overdrive_Light.jpeg"
-	},
-	{
-		"id": 17,
-		"title": "Reduced Power Warning",
-		"description": "Indicates Engine Computer has limited engine power output. The ECM has many levels of reduced power depending on what component has failed in its control system. Usually requires diagnosis with a professional scan tool.",
-		"image_url": "/assets/src/images/warning-lights/Reduced_Power_Warning.png"
-	},
-	{
-		"id": 18,
-		"title": "Security Alert",
-		"description": "If the symbol lights momentarily it may mean that the ignition switch is locked and will need the proper transponder-equipped key to re-start. If the symbol is visible when the vehicle is on, then it typically indicates a malfunction in the security system.",
-		"image_url": "/assets/src/images/warning-lights/Security_Alert.jpeg"
-	},
-	{
-		"id": 19,
-		"title": "Service Vehicle Soon",
-		"description": "Typically indicates a lighting or other electrical problem that is controlled by the BCM (body control module). Check all lights, head lights, turn signals, brake lights, and hazard lights. This symbol may also be used to warn driver of a traction control problem, or a communication problem between modules.",
-		"image_url": "/assets/src/images/warning-lights/Service_Vehicle_Soon.png"
-	},
-	{
-		"id": 20,
-		"title": "TPMS (Tire Pressure Monitoring System)",
-		"description": "Indicates the tire pressure monitoring system has found a tire with low air pressure or there may be a sensor malfunction. Check tire pressure. Some vehicles will allow manual reset of TPMS warning light and others will require professional diagnosis. Refer to owner’s manual.",
-		"image_url": "/assets/src/images/warning-lights/Tire_Pressure_Monitoring_System.jpeg"
-	},
-	{
-		"id": 21,
-		"title": "Traction Control or ESP",
-		"description": "Illuminates when the vehicle’s traction control/antiskid or electronic stability system is in use. Usually an indicator that conditions are slippery.",
-		"image_url": "/assets/src/images/warning-lights/Traction_Control.png"
-	},
-	{
-		"id": 22,
-		"title": "Transmission Temperature",
-		"description": "Transmission is operating at higher than optimum temperature as transmission fluid is hotter than normal. Check transmission fluid level and engine coolant level.",
-		"image_url": "/assets/src/images/warning-lights/Transmission_Temperature.png"
-	},
-	{
-		"id": 23,
-		"title": "Washer Fluid Reminder",
-		"description": "Indicates washer fluid is low. Fill washer fluid reservoir. The cap has a symbol that looks like a windshield. Some vehicles have separate reservoirs for front and rear window washers.",
-		"image_url": "/assets/src/images/warning-lights/Washer_Fluid_Reminder.png"
-	}
+  {
+    "id": 1,
+    "title": "ABS Warning Light",
+    "vehicle_type": "Toyota",
+    "description": "This is one of the most common dashboard warning lights. When you see this, it typically means there’s a malfunction with your anti-lock braking system. You can still brake, but it’s recommended to seek Toyota service immediately.",
+    "image_url": "/assets/src/images/toyota-warning-lights/ABS_Warning_Light.avif"
+  },
+  {
+    "id": 2,
+    "title": "Red Battery Symbol",
+    "vehicle_type": "Toyota",
+    "description": "A red battery symbol illuminating on your dashboard also requires immediate attention. This light indicates that there is a problem with the battery charging system, which could end up leaving you stranded. There may be symptoms prior to this light coming on, like flickering dashboard lights, interior lights, or even your headlights.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Red_Battery_Symbol.avif"
+  },
+  {
+    "id": 3,
+    "title": "Speedometer With an Arrow",
+    "vehicle_type": "Toyota",
+    "description": "This symbol indicates that cruise control is active, hence the arrow pointing to a speedometer. You will see this light any time you are using cruise control – it will be yellow if the feature is turned on and green when the cruising speed limit is set.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Speedometer_With_an_Arrow.avif"
+  },
+  {
+    "id": 4,
+    "title": "Steering Wheel With Exclamation Point",
+    "vehicle_type": "Toyota",
+    "description": "The indicator light that shows a steering wheel with exclamation point is a Power Steering System Warning light. This light can indicate a serious issue, so it’s important to have your vehicle checked out immediately.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Steering_Wheel_With_Exclamation_Point.avif"
+  },
+  {
+    "id": 5,
+    "title": "Sideways Jellyfish Light",
+    "vehicle_type": "Toyota",
+    "description": "Although this light may appear to be a sideways jellyfish, it’s actually a headlight. This symbol represents your high-beam headlights, and when you see it in blue, your high beams are on. If your vehicle is equipped with auto high beams, you’ll see this symbol with “AUTO” below it.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Sideways_Jellyfish_Light.avif"
+  },
+  {
+    "id": 6,
+    "title": "Oil Can Spout With Drip",
+    "vehicle_type": "Toyota",
+    "description": "If you see an oil can Toyota dashboard warning light, it indicates a problem with your engine oil pressure. This light may illuminate if it’s really cold outside because it can take longer for oil to get up to pressure in extreme cold. However, if the light stays on, there is likely a pressure issue, and you need to have your vehicle serviced immediately. Your new Toyota RAV4 is counting on you!",
+    "image_url": "/assets/src/images/toyota-warning-lights/Oil_Can_Spout_With_Drip.avif"
+  },
+  {
+    "id": 7,
+    "title": "Gas Pump Light",
+    "vehicle_type": "Toyota",
+    "description": "The old-school gas pump light on your Toyota dashboard is another of the most common lights, and it simply means your fuel level is low. Fill up your tank as soon as possible; otherwise, you may be spending the night on the side of the road in your new Toyota Highlander!",
+    "image_url": "/assets/src/images/toyota-warning-lights/Gas_Pump_Light.avif"
+  },
+  {
+    "id": 8,
+    "title": "Triangle With an Exclamation Point in the Middle",
+    "vehicle_type": "Toyota",
+    "description": "The Toyota Master Warning light looks like a triangle with an exclamation point in the center. This light is like a catch-all, and it can indicate any number of issues, from minor to severe. If you see this light and hear a buzzer, you should get your Corolla or Tacoma in for Toyota diagnostics service as soon as you can.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Triangle_With_an_Exclamation_Point_in_the_Middle.avif"
+  },
+  {
+    "id": 9,
+    "title": "The Person & Seatbelt Light",
+    "vehicle_type": "Toyota",
+    "description": "If you or a passenger are in the vehicle without a seatbelt on, you’ll see this light on your Toyota dashboard. The light may be yellow or red depending on the model and year of your vehicle, and if you put the car in gear without buckling in, you’ll likely hear a beeping warning sound, too. It’s always crucial to buckle up for safety!",
+    "image_url": "/assets/src/images/toyota-warning-lights/The_Person_and_Seatbelt_Light.avif"
+  },
+  {
+    "id": 10,
+    "title": "TRAC OFF or TRC OFF",
+    "vehicle_type": "Toyota",
+    "description": "This is the Traction Control Off light, and it illuminates to let you know that the traction control system has been switched off. If you go off-road with your new Toyota 4Runner, it may be wise to turn this system off if the conditions require continuous wheel spin. This isn’t so much a warning light as it is an indicator.",
+    "image_url": "/assets/src/images/toyota-warning-lights/TRAC_OFF_or_TRC_OFF.avif"
+  },
+  {
+    "id": 10,
+    "title": "Car With a Lock",
+    "vehicle_type": "Toyota",
+    "description": "This is your Security Indicator. It illuminates at vehicle startup, and you’ll also see it when the vehicle’s anti-theft system has been activated. If this light stays on, there may be a fault in the security system, in which case an inspection is recommended.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Car_With_a_Lock.avif"
+  },
+  {
+    "id": 11,
+    "title": "Car With Squiggly Lines",
+    "vehicle_type": "Toyota",
+    "description": "This Toyota dashboard warning light is a Slip Indicator, and it lights up to let you know that you may be driving in slippery conditions. This could mean you are on wet pavement or the vehicle has detected slippage from ice, snow, mud, or other conditions. If you see this, be aware of low-traction driving conditions.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Car_With_Squiggly_Lines.avif"
+  },
+  {
+    "id": 12,
+    "title": "Car With Squiggly Lines & OFF",
+    "vehicle_type": "Toyota",
+    "description": "This light pairs with your TRAC OFF light, and it lights up to let you know that your traction control is off, likely because the vehicle has detected slippery conditions. If it’s flashing, that means the system may be malfunctioning. In this case, it’s best to have your vehicle inspected.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Car_With_Squiggly_Lines_&_OFF.avif"
+  },
+  {
+    "id": 13,
+    "title": "Seated Passenger With a Ball on Their Lap",
+    "vehicle_type": "Toyota",
+    "description": "Although this light looks like a passenger with a ball on their lap, it’s actually the Airbag SRS warning light. This light will illuminate when the vehicle detects a problem with the airbag system, which means you should get your Camry or other Toyota vehicle in for service immediately.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Seated_Passenger_With_a_Ball_on_Their_Lap.avif"
+  },
+  {
+    "id": 14,
+    "title": "Parentheses With an Exclamation Point in the Middle",
+    "vehicle_type": "Toyota",
+    "description": "This image may look like a lampshade or parentheses, but it is actually an indicator of a tire with low air pressure. This light works with your Tire Pressure Monitoring System to let you know that one or more tires need to be inflated. If it persists, seek service.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Parentheses-With-an-Exclamation-Point-in-the-Middle.avif"
+  },
+  {
+    "id": 15,
+    "title": "Left & Right Arrows",
+    "vehicle_type": "Toyota",
+    "description": "Everyone has seen these lights: They’re your Turn Signal Indicators. If you see one of these flashing, your turn signal is active. Either complete your turn or flip the turn signal switch back to its normal position to turn this light off.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Left-&-Right-Arrows.avif"
+  },
+  {
+    "id": 16,
+    "title": "ECO Light",
+    "vehicle_type": "Toyota",
+    "description": "This is your Eco Driving Indicator light, and it illuminates to let you know that you are driving in a fuel-efficient manner. This is a great light to see, as it means you’re maximizing your vehicle’s efficiency.",
+    "image_url": "/assets/src/images/toyota-warning-lights/ECO-Light.avif"
+  },
+  {
+    "id": 17,
+    "title": "Chassis With Wheels",
+    "vehicle_type": "Toyota",
+    "description": "This is your Four-Wheel Drive Indicator light, which typically illuminates when you have turned on 4WD in your vehicle. If this light is flashing, there may be an issue with the system, so you should have your vehicle inspected as soon as possible.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Chassis-With-Wheels.avif"
+  },
+  {
+    "id": 18,
+    "title": "Sideways Jellyfish With a Slash",
+    "vehicle_type": "Toyota",
+    "description": "This is another headlight indicator for your front fog lights. The slash through the headlight beams indicates fog, and this light shows up when your fog lights are in use.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Sideways-Jellyfish-With-a-Slash.avif"
+  },
+  {
+    "id": 19,
+    "title": "Gas Pump With Arrow",
+    "vehicle_type": "Toyota",
+    "description": "This image tells you which side of your vehicle the fuel tank door is on – especially handy when the vehicle is new to you. It will either point to the driver or passenger side at all times, so you never forget which side to pull up to the pump on.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Gas-Pump-With-Arrow.avif"
+  },
+  {
+    "id": 20,
+    "title": "Thermometer in Waves",
+    "vehicle_type": "Toyota",
+    "description": "If you see a thermometer in what appears to be waves or water, your vehicle is letting you know that your coolant is too hot. When you see this light, stop and turn off your car immediately and call for assistance. If you continue driving, you risk overheating your vehicle and possibly causing permanent damage to the engine.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Thermometer-in-Waves.avif"
+  },
+  {
+    "id": 21,
+    "title": "KDSS Light",
+    "vehicle_type": "Toyota",
+    "description": "The KDSS light stands for Kinetic Dynamic Suspension System, and this light shows up as an urgent warning about your suspension system. If you see this symbol, take your vehicle in for service at your earliest convenience.",
+    "image_url": "/assets/src/images/toyota-warning-lights/KDSS-Light.avif"
+  },
+  {
+    "id": 22,
+    "title": "Car Veering Out of Lane",
+    "vehicle_type": "Toyota",
+    "description": "If your vehicle is equipped with a Lane Departure Warning System, you’ll see this light when you have started to veer out of your current lane without signaling. It’s often paired with an audible alert to let you know to correct your steering.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Car-Veering-Out-of-Lane.avif"
+  },
+  {
+    "id": 23,
+    "title": "4LO Light",
+    "vehicle_type": "Toyota",
+    "description": "The 4LO light is the Low-Speed Four-Wheel drive indicator. When equipped, this light illuminates when your 4LO system is active. If it’s flashing, it means there may be a malfunction with the system that needs prompt servicing.",
+    "image_url": "/assets/src/images/toyota-warning-lights/4LO-Light.avif"
+  },
+  {
+    "id": 24,
+    "title": "4LO Light",
+    "vehicle_type": "Toyota",
+    "description": "The 4LO light is the Low-Speed Four-Wheel drive indicator. When equipped, this light illuminates when your 4LO system is active. If it’s flashing, it means there may be a malfunction with the system that needs prompt servicing.",
+    "image_url": "/assets/src/images/toyota-warning-lights/4LO-Light.avif"
+  },
+  {
+    "id": 25,
+    "title": "Malfunction/Check Engine Light",
+    "vehicle_type": "Toyota",
+    "description": "Every driver’s worst fear: the Check Engine Light. This light will show up when there is any problem detected in the engine, which can range from minor to major. Schedule service immediately when you see this light!",
+    "image_url": "/assets/src/images/toyota-warning-lights/Malfunction-Check-Engine-Light.avif"
+  },
+  {
+    "id": 26,
+    "title": "Vehicle on Flat Surface",
+    "vehicle_type": "Toyota",
+    "description": "Your Multi-Terrain Select indicator light looks like a vehicle on a flat surface, and it shows up to let you know that your Multi-Terrain Select system is active. If it flashes continuously, there may be a problem that requires servicing.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Vehicle-on-Flat-Surface.avif"
+  },
+  {
+    "id": 27,
+    "title": "Open Door Warning",
+    "vehicle_type": "Toyota",
+    "description": "If one or more of your doors has been left open or ajar, you’ll see this light. It’s not a warning for service, but it is a warning to check all your doors for safety.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Open-Door-Warning.avif"
+  },
+  {
+    "id": 28,
+    "title": "PARK Light",
+    "vehicle_type": "Toyota",
+    "description": "If you’ve engaged your parking brake, you’ll see this PARK light show up on your dashboard. The parking brake indicator reminds you to disengage your parking brake before driving.",
+    "image_url": "/assets/src/images/toyota-warning-lights/PARK-Light.avif"
+  },
+  {
+    "id": 29,
+    "title": "Cars Crashing With Star and Arrow Light",
+    "vehicle_type": "Toyota",
+    "description": "This light looks alarming, but it’s just your Toyota Safety Sense features at work. When equipped, you’ll see this light when your Pre-Collision System detects a potential hazard. If it’s flashing, there may be a fault in the system, and you should schedule service.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Cars-Crashing-With-Star-and-Arrow-Light.avif"
+  },
+  {
+    "id": 30,
+    "title": "Chassis With Wheels & an X",
+    "vehicle_type": "Toyota",
+    "description": "If you see this light, which looks similar to the four-wheel drive indicator but has an X on the rear axle, this is your Rear Differential Lock Indicator. When equipped, this symbol means that the rear differential is engaged to help with traction control. If it’s flashing, it may be malfunctioning, so you should bring your vehicle in for service as soon as possible.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Chassis-With-Wheels-&-an-X.avif"
+  },
+  {
+    "id": 31,
+    "title": "RCTA OFF Light",
+    "vehicle_type": "Toyota",
+    "description": "RCTA stands for “Rear Cross Traffic Alert.” When you see this light, it indicates that the Rear Cross Traffic Alert system is off and not scanning for obstacles behind the vehicle. It can be manually turned on and off in your Multi-Information Display.",
+    "image_url": "/assets/src/images/toyota-warning-lights/RCTA-OFF-Light.avif"
+  },
+  {
+    "id": 32,
+    "title": "A/T P Light",
+    "vehicle_type": "Toyota",
+    "description": "This is a Parking Indicator Warning Light that means that your transmission is not fully locked in Park. If you shut off your vehicle before shifting into Park, you may see this light on your dashboard. It can also indicate an issue with the transmission, so if it doesn’t turn off, bring your Toyota vehicle in for service.",
+    "image_url": "/assets/src/images/toyota-warning-lights/A-T-P-Light.avif"
+  },
+  {
+    "id": 33,
+    "title": "A-TRAC Light",
+    "vehicle_type": "Toyota",
+    "description": "The A-TRAC light is another symbol for your Active Traction Control system. This light may illuminate when the system is engaged and working to maintain traction. If flashing, there may be a malfunction, and you should have your vehicle checked out.",
+    "image_url": "/assets/src/images/toyota-warning-lights/A-TRAC-Light.avif"
+  },
+  {
+    "id": 34,
+    "title": "AUTO LSD Light",
+    "vehicle_type": "Toyota",
+    "description": "‘LSD’ on a Toyota vehicle stands for Limited Slip Differential. When you see this indicator, it means that the limited slip differential system is engaged to improve traction by sending power to a specific wheel if the vehicle has detected slippage. If flashing, there may be an issue, and you should bring your car in for service.",
+    "image_url": "/assets/src/images/toyota-warning-lights/AUTO_LSD-Light.avif"
+  },
+  {
+    "id": 35,
+    "title": "Car With Side-to-Side Arrows",
+    "vehicle_type": "Toyota",
+    "description": "Half a car symbol with side-to-side arrows beside it is your Automatic Running Boards Indicator light. If your Toyota vehicle has automatic running boards, you’ll see this light when they are deploying or retracting. If it stays on or is flashing, a problem may be present.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Car-With-Side-to-Side-Arrows.avif"
+  },
+  {
+    "id": 36,
+    "title": "Two Cars With OFF",
+    "vehicle_type": "Toyota",
+    "description": "This is one of the more complex car symbols on Toyota dashboards. If you see two cars beside each other, presumably driving, with waves between them and OFF below them, this is your Blind Spot Monitor OFF indicator light, meaning that your Blind Spot Detection system is not engaged. You can manually turn it on or off in your Multi-Information display.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Two-Cars-With-OFF.avif"
+  },
+  {
+    "id": 37,
+    "title": "Two Cars With Waves in Side View Mirror",
+    "vehicle_type": "Toyota",
+    "description": "If you see a symbol with two cars with waves between them in your driver or passenger side view mirrors, it means that your car has detected a vehicle or obstacle in your blind spot, and it is not safe to change lanes.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Two-Cars-With-Waves-in-Side-View-Mirror.avif"
+  },
+  {
+    "id": 38,
+    "title": "Shoeprint, Pedal, and Arrow Light",
+    "vehicle_type": "Toyota",
+    "description": "This indicator light may look like something that belongs in a board game, but it is actually a Brake Override System/Drive-Start Control Warning light. This is a serious warning light that warrants an immediate trip to the service and parts center, as it means there may be a malfunction in the braking or driving system.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Shoeprint-Pedal-and-Arrow-Light.avif"
+  },
+  {
+    "id": 39,
+    "title": "BRAKE Light",
+    "vehicle_type": "Toyota",
+    "description": "If you see BRAKE illuminated on the dashboard of your Toyota vehicle, there may be a problem with your brakes or braking system. If this light turns on and won’t go away, call for service immediately.",
+    "image_url": "/assets/src/images/toyota-warning-lights/BRAKE-Light.avif"
+  },
+  {
+    "id": 40,
+    "title": "Chassis With Wheels and Center X",
+    "vehicle_type": "Toyota",
+    "description": "If you see BRAKE illuminated on the dashboard of your Toyota vehicle, there may be a problem with your brakes or braking system. If this light turns on and won’t go away, call for service immediately.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Chassis-With-Wheels-and-Center-X.avif"
+  },
+  {
+    "id": 41,
+    "title": "Vehicle Outline on Mountain",
+    "vehicle_type": "Toyota",
+    "description": "This symbol looks like an SUV climbing up a mountain, but this is your Crawl Control Indicator light. It tells you that your crawl control system is active, which is a feature that allows travel on off-road surfaces at a fixed low speed.",
+    "image_url": "/assets/src/images/toyota-warning-lights/Vehicle-Outline-on-Mountain.avif"
+  },
+  {
+    "id": 42,
+    "title": "SUV on a Downhill Slope",
+    "vehicle_type": "Toyota",
+    "description": "An SUV on a downhill slope is a symbol that indicates your Downhill Assist Control system if equipped. When illuminated, it tells you that the system is engaged and helping your vehicle make a steady descent at a consistent, safe speed on steep terrain. If flashing, it means there may be a malfunction, and you should schedule service as soon as possible.",
+    "image_url": "/assets/src/images/toyota-warning-lights/SUV-on-a-Downhill-Slope.avif"
+  },
+  {
+    "id": 43,
+    "title": "ABS Light",
+    "vehicle_type": "Mercedes",
+    "description": "The Anti-Lock Brake System along with the ESP®, BAS®, Electronic Brake Force Distribution, and Hill-Start Assist are deactivated. You can still slow your vehicle and stop, but the system won’t respond when emergency braking is needed. ",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/ABS-Light.avif"
+  },
+  {
+    "id": 44,
+    "title": "Steering Wheel Light",
+    "vehicle_type": "Mercedes",
+    "description": "Power steering is no longer activated and you may need extra force to turn the steering wheel.",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/Steering-Wheel-Light.avif"
+  },
+  {
+    "id": 45,
+    "title": "Battery Light",
+    "vehicle_type": "Mercedes",
+    "description": "The battery isn’t able to charge properly. This may be caused by a malfunction with the alternator, poly-v belt, or a problem with the electrical system.",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/Battery-Light.avif"
+  },
+  {
+    "id": 46,
+    "title": "Brake Wear Light",
+    "vehicle_type": "Mercedes",
+    "description": "Not to be confused with the ABS light, the brake wear light indicated when your brake pads or rotors need to be replaced.",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/Brake-Wear-Light.avif"
+  },
+  {
+    "id": 47,
+    "title": "ATTENTION ASSIST® Light",
+    "vehicle_type": "Mercedes",
+    "description": "The ATTENTION ASSIST® system monitors your driving status for signs of sleepiness. When this light shows up in the dash, it’s time to take a driving break. ",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/ATTENTION-ASSIST-Light.jpg"
+  },
+  {
+    "id": 48,
+    "title": "Glow Plug Light",
+    "vehicle_type": "Mercedes",
+    "description": "If you drive a diesel, the glow plugs heat the cylinders within the engine. When this light comes on, it simply means the glow plugs are heating the cylinders.",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/Glow-Plug-Light.avif"
+  },
+  {
+    "id": 49,
+    "title": "DEF/AdBlue® Indicator",
+    "vehicle_type": "Mercedes",
+    "description": "DEF stands for Diesel Exhaust Fluid and it plays a crucial role in your emissions system. If the light is on, it means you’re running low on DEF.",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/DEF-AdBlue_Indicator.avif"
+  },
+  {
+    "id": 50,
+    "title": "ESC/ESP® Light",
+    "vehicle_type": "Mercedes",
+    "description": "The Electronic Stability Control (previously referred to as ESP®, Electronic Stability Program) has been deactivated and you may experience reduced traction.",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/ESC-ESP-Light.avif"
+  },
+  {
+    "id": 51,
+    "title": "Coolant Light",
+    "vehicle_type": "Mercedes",
+    "description": "Your vehicle may have a malfunctioning temperature gauge or the coolant volume is too low. If you notice your vehicle’s temperature gauge climbing, it may be a good idea to pull over and turn your vehicle off immediately. Driving while your engine is overheating can be detrimental.",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/Coolant-Light.avif"
+  },
+  {
+    "id": 52,
+    "title": "Tire Pressure Light",
+    "vehicle_type": "Mercedes",
+    "description": "One or several of your tires has reduced tire pressure. Sometimes, it can also mean that a tire pressure sensor needs to be replaced.",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/Tire-Pressure-Light.avif"
+  },
+  {
+    "id": 53,
+    "title": "Gas Light",
+    "vehicle_type": "Mercedes",
+    "description": "You’re running low on fuel.",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/Tire-Pressure-Light.avif"
+  },
+  {
+    "id": 54,
+    "title": "Seat Belt Light",
+    "vehicle_type": "Mercedes",
+    "description": "The driver or passenger needs to fasten their seat belts. This indicator light is often paired with an audio warning as well.",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/Seat-Belt-Light.avif"
+  },
+  {
+    "id": 55,
+    "title": "Airbag Light",
+    "vehicle_type": "Mercedes",
+    "description": "This indicates that the SRS (Supplemental Restraint System) is not working. If an accident was to occur, the airbag may not deploy. If you notice this light illuminated, visit a service center immediately.",
+    "image_url": "/assets/src/images/mercedes-benz-warning-lights/Airbag-Light.avif"
+  }
 ]
